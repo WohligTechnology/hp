@@ -17,6 +17,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
   ];
 })
+.controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("about-us");
+  $scope.menutitle = NavigationService.makeactive("About Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+.controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("careers");
+  $scope.menutitle = NavigationService.makeactive("Careers");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+.controller('ProductsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("products");
+  $scope.menutitle = NavigationService.makeactive("Products");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+.controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("services");
+  $scope.menutitle = NavigationService.makeactive("Services");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;

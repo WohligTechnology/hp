@@ -17,6 +17,26 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     url: "/",
     templateUrl: "views/template.html",
     controller: 'HomeCtrl'
+  })
+    .state('about-us', {
+    url: "/about-us",
+    templateUrl: "views/template.html",
+    controller: 'AboutUsCtrl'
+  })
+    .state('careers', {
+    url: "/careers",
+    templateUrl: "views/template.html",
+    controller: 'CareersCtrl'
+  })
+    .state('products', {
+    url: "/products",
+    templateUrl: "views/template.html",
+    controller: 'ProductsCtrl'
+  })
+    .state('services', {
+    url: "/services",
+    templateUrl: "views/template.html",
+    controller: 'ServicesCtrl'
   });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
