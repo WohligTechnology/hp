@@ -1,57 +1,46 @@
 <section>
-  <div class="hp-banner">
-    <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
-        <li>
-            <img ng-src="{{s}}" class="img-responsive" alt="Hindustan Platinum">
-        </li>
-    </flex-slider>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4" ng-repeat="item in product track by $index">
-        <div class="hp-img-box">
-          <img ng-src="{{item.img}}" alt="Hindustan Platinum" class="img-responsive">
-          <div class="hp-overlayer-name">
-            <h4>{{item.name}}</h4>
-          </div>
-          <div class="hp-overlayer-bg">
-            <img src="img/hp-hover.jpg" alt="Hindustan Platinum"  class="img-responsive">
-            <div class="hp-pr-title">
-              <h4>{{item.name}}</h4>
+    <div class="hp-banner">
+        <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
+            <li>
+                <img ng-src="{{s}}" class="img-responsive" alt="Hindustan Platinum">
+            </li>
+        </flex-slider>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" ng-repeat="item in product track by $index">
+                <div product value="item"> </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <section>
-  <div class="hp-mid-banner">
-    <img src="hp-en.jpg"alt="Hindustan Platinum" class="img-responsive">
-  </div>
+    <div class="hp-mid-banner">
+        <img src="hp-en.jpg" alt="Hindustan Platinum" class="img-responsive">
+    </div>
 </section>
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="hp-about text-center">
-          <h4>ABOUT US</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hp-about text-center">
+                    <h4>ABOUT US</h4>
 
-          <p>
-            Established in 1961, Hindustan Platinum is India's leading manufacturer and refiner of precious metal products with wide and
-diverse industrial applications. With experience of more than a half a century, Hindustan Platinum has fine-tuned to perfection various traditional and innovative high-yield technologies to produce high-purity precious metals and industrial products.
-          </p>
-          <p>
-            Our proprietary indigenous technologies and processes, coupled with global technical partnerships have quipped us to deliver excellence in quality, quantity and customer-centric services.
-          </p>
-          <p>
-            Over the years we have established a large customer base across more than 50 countries across 5 continents. With the world as our market, Hindustan Platinum is truly a global player in the precious metal products, processes and services Industry.
-          </p>
-          <div class="hp-btn">
-            <button type="button" name="button">know more</button>
-          </div>
+                    <p>
+                        Established in 1961, Hindustan Platinum is India's leading manufacturer and refiner of precious metal products with wide and diverse industrial applications. With experience of more than a half a century, Hindustan Platinum has fine-tuned to perfection
+                        various traditional and innovative high-yield technologies to produce high-purity precious metals and industrial products.
+                    </p>
+                    <p>
+                        Our proprietary indigenous technologies and processes, coupled with global technical partnerships have quipped us to deliver excellence in quality, quantity and customer-centric services.
+                    </p>
+                    <p>
+                        Over the years we have established a large customer base across more than 50 countries across 5 continents. With the world as our market, Hindustan Platinum is truly a global player in the precious metal products, processes and services Industry.
+                    </p>
+                    <div class="hp-btn">
+                        <button type="button" name="button">know more</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>

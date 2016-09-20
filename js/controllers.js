@@ -41,6 +41,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('ProductInsideCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("product-inside");
+  $scope.menutitle = NavigationService.makeactive("Product Inside");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  $scope.product=[{
+    name:"LABORATORY APPARATUS  ",
+    img:"img/5.jpg"
+  },{
+    name:"SPUTTER TARGETS ",
+    img:"img/6.jpg"
+  },{
+    name:"PRECIOUS METALGAUZES & Allied Services ",
+    img:"img/7.jpg"
+  },{
+    name:"Platinum/ Rhodium alloy stirrers ",
+    img:"img/8.jpg"
+  },{
+    name:"Precious Metal management ",
+    img:"img/9.jpg"
+  },{
+    name:"SPUTTER TARGETS  ",
+    img:"img/10.jpg"
+  },{
+    name:"Platinum/ Rhodium alloy stirrers",
+    img:"img/11.jpg"
+  },{
+    name:"LABORATORY APPARATUS  ",
+    img:"img/5.jpg"
+  }];
+})
 .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("careers");
   $scope.menutitle = NavigationService.makeactive("Careers");

@@ -28,6 +28,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'CareersCtrl'
   })
+    .state('product-inside', {
+    url: "/product-inside",
+    templateUrl: "views/template.html",
+    controller: 'ProductInsideCtrl'
+  })
     .state('products', {
     url: "/products",
     templateUrl: "views/template.html",
@@ -87,6 +92,20 @@ firstapp.directive('fancyboxBox', function($document) {
         }
     };
 });
+firstapp.directive('product', function($document) {
+    return {
+        restrict: 'EA',
+        replace: true,
+        templateUrl: "views/directive/product-main.html",
+        scope: {
+            item: "=value"
+        },
+        link: function(scope, element, attr) {
+          
+        }
+    };
+});
+
 
 
 firstapp.config(function ($translateProvider) {
