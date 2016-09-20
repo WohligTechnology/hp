@@ -11,11 +11,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
   $scope.mySlides = [
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    'img/hp-banner.jpg',
+    'img/hp-banner.jpg',
+    'img/hp-banner.jpg',
+    'img/hp-banner.jpg'
   ];
+
+  $scope.product=[{
+    name:"ENGINEERED PRODUCTS ",
+    img:"img/1.jpg"
+  },{
+    name:"ELECTRICAL CONTACTS ",
+    img:"img/2.jpg"
+  },{
+    name:"SALTS AND CATALYSTS ",
+    img:"img/3.jpg"
+  },{
+    name:"SERVICES ",
+    img:"img/4.jpg"
+  },{
+    name:"Precious Metal management ",
+    img:"img/5.jpg"
+  }];
 })
 .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("about-us");
