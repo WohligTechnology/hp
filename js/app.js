@@ -28,6 +28,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'CareersCtrl'
   })
+    .state('engineering-product', {
+    url: "/engineering-product",
+    templateUrl: "views/template.html",
+    controller: 'EngineeringProductCtrl'
+  })
     .state('product-inside', {
     url: "/product-inside",
     templateUrl: "views/template.html",
@@ -101,7 +106,7 @@ firstapp.directive('product', function($document) {
             item: "=value"
         },
         link: function(scope, element, attr) {
-          
+
         }
     };
 });

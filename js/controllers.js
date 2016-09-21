@@ -86,6 +86,42 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("engineering-product");
+  $scope.menutitle = NavigationService.makeactive("Engineering Product");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+    $scope.oneAtATime = true;
+
+    $scope.status = {
+  isCustomHeaderOpen: false,
+  isFirstOpen: true,
+  isFirstDisabled: false
+};
+
+
+    $scope.tabs = 'az';
+    $scope.classp = 'active-tab';
+    $scope.classv = '';
+
+
+    $scope.tabchanges = function(tabs, a) {
+
+        $scope.tabs = tabs;
+        if (a == 1) {
+
+            $scope.classp = "active-tab";
+            $scope.classv = '';
+
+        } else {
+
+            $scope.classp = '';
+            $scope.classv = "active-tab";
+        }
+    };
+
+
+})
 .controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("services");
   $scope.menutitle = NavigationService.makeactive("Services");
