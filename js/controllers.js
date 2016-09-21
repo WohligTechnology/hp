@@ -86,6 +86,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+.controller('ElectricalProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("electrical-product");
+  $scope.menutitle = NavigationService.makeactive("Electrical-Product");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.product=[{
+    name:"RIVETS ",
+    img:"img/a1.jpg"
+  },{
+    name:"PROFILE",
+    img:"img/a2.jpg"
+  },{
+    name:"WIRES",
+    img:"img/a3.jpg"
+  },{
+    name:"ASSEMBLES",
+    img:"img/a4.jpg"
+  },{
+    name:"BRAZERS",
+    img:"img/a5.jpg"
+  },{
+    name:"R&D ",
+    img:"img/a6.jpg"
+  }];
+
+})
 .controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("engineering-product");
   $scope.menutitle = NavigationService.makeactive("Engineering Product");

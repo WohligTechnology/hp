@@ -33,6 +33,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'EngineeringProductCtrl'
   })
+    .state('electrical-product', {
+    url: "/electrical-product",
+    templateUrl: "views/template.html",
+    controller: 'ElectricalProductCtrl'
+  })
+    .state('electrical-inner', {
+    url: "/electrical-inner",
+    templateUrl: "views/template.html",
+    controller: 'ElectricalInnerCtrl'
+  })
     .state('product-inside', {
     url: "/product-inside",
     templateUrl: "views/template.html",
