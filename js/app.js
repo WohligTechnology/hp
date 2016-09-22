@@ -48,6 +48,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'ProfileCtrl'
   })
+    .state('assembly', {
+    url: "/assembly",
+    templateUrl: "views/template.html",
+    controller: 'AssemblyCtrl'
+  })
     .state('engineering-home', {
     url: "/engineering-home",
     templateUrl: "views/template.html",
