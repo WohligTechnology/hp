@@ -124,6 +124,14 @@ $scope.shape=[
 
 
 })
+.controller('SemiFinishedCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("semi-finished");
+  $scope.menutitle = NavigationService.makeactive("Semi-Finished");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+
+})
 .controller('R&DCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("r&d");
   $scope.menutitle = NavigationService.makeactive("R&D");

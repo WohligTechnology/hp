@@ -43,6 +43,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'RivetsCtrl'
   })
+    .state('semi-finished', {
+    url: "/semi-finished",
+    templateUrl: "views/template.html",
+    controller: 'SemiFinishedCtrl'
+  })
     .state('r&d', {
     url: "/r&d",
     templateUrl: "views/template.html",
