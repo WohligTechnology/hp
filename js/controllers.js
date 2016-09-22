@@ -252,21 +252,27 @@ $scope.shape=[
 
   $scope.product=[{
     name:"RIVETS ",
+    link:"rivets ",
     img:"img/a1.jpg"
   },{
     name:"PROFILE",
+    link:"profile",
     img:"img/a2.jpg"
   },{
-    name:"WIRES",
+    name:"ASSEMBLES",
+    link:"assembly",
     img:"img/a3.jpg"
   },{
-    name:"ASSEMBLES",
+    name:"R&D",
+    link:"r&d",
     img:"img/a4.jpg"
   },{
-    name:"BRAZERS",
+    name:"SEMI-FINISHED",
+    link:"semi-finished",
     img:"img/a5.jpg"
   },{
     name:"R&D ",
+    link:"r&d",
     img:"img/a6.jpg"
   }];
 
