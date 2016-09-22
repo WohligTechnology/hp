@@ -124,6 +124,22 @@ $scope.shape=[
 
 
 })
+.controller('R&DCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("r&d");
+  $scope.menutitle = NavigationService.makeactive("R&D");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.slider=[
+    'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg',
+    'img/4.jpg'
+
+  ]
+
+
+})
 .controller('EngineeringHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("engineering-home");
   $scope.menutitle = NavigationService.makeactive("engineering-home");

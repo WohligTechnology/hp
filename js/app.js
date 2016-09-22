@@ -43,6 +43,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'RivetsCtrl'
   })
+    .state('r&d', {
+    url: "/r&d",
+    templateUrl: "views/template.html",
+    controller: 'R&DCtrl'
+  })
     .state('profile', {
     url: "/profile",
     templateUrl: "views/template.html",
