@@ -92,6 +92,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
+  $scope.get=[{
+    name:"EUROPE",
+    email:"contacteu@hp.co.in"
+  },{
+    name:"REST OF THE WORLD",
+    email:"contacteu@hp.co.in"
+  }];
+  $scope.download=[{
+    name:"Download - PRECIOUS METAL COMPOUND"
+
+  },{
+    name:"Download - PRECIOUS METAL COMPOUND"
+
+  }];
+
   $scope.product=[{
     name:"RIVETS ",
     img:"img/a1.jpg"

@@ -54,31 +54,29 @@
           <div class="text-center">
             <h4>GET IN TOUCH</h4>
             <div class="hp-gt">
-              <ul>
-                <li>
-                  <div class="hp-cn">
-                    <h4>EUROPE</h4>
-                    <p>or info related queries email </p>
-                    <p>us on <a href="">contacteu@hp.co.in</a></p>
-                  </div>
-                </li>
-                <li>
-                  <div class="hp-cn">
-                    <h4>REST OF THE WORLD</h4>
-                    <p>or info related queries email </p>
-                    <p>us on <a href="">contacteu@hp.co.in</a></p>
-                  </div>
-                </li>
-              </ul>
+              <flex-slider flex-slide="s in get track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
+                  <li>
+                    <div class="hp-cn">
+                      <h4>{{s.name}}</h4>
+                      <p>or info related queries email </p>
+                      <p>us on <a href="">{{s.email}}</a></p>
+                    </div>
+                  </li>
+              </flex-slider>
+
             </div>
             <div class="hp-dn">
-              <div class="hp-dn-icon">
-                <img src="img/download.png" alt="Hindustan Platinum">
-              </div>
-              <div class="hp-dn-txt">
-                <span>Download - PRECIOUS
-METAL COMPOUND</span>
-              </div>
+              <flex-slider flex-slide="s in download track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
+                  <li>
+                    <div class="hp-dn-icon">
+                      <img src="img/download.png" alt="Hindustan Platinum">
+                    </div>
+                    <div class="hp-dn-txt">
+                      <span>{{s.name}}</span>
+                    </div>
+                  </li>
+              </flex-slider>
+
             </div>
           </div>
         </div>
