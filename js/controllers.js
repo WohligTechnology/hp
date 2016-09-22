@@ -116,6 +116,14 @@ $scope.shape=[
 
 
 })
+.controller('AssemblyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("assembly");
+  $scope.menutitle = NavigationService.makeactive("Assembly");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+
+})
 .controller('EngineeringHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   $scope.template = TemplateService.changecontent("engineering-home");
   $scope.menutitle = NavigationService.makeactive("engineering-home");
