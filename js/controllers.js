@@ -41,11 +41,47 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
-.controller('ProductInsideCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  $scope.template = TemplateService.changecontent("product-inside");
-  $scope.menutitle = NavigationService.makeactive("Product Inside");
+.controller('ElectricalInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("electrical-inner");
+  $scope.menutitle = NavigationService.makeactive("Electrical Inner");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+
+  $scope.oneAtATime = true;
+
+  $scope.status = {
+isCustomHeaderOpen: false,
+isFirstOpen: true,
+isFirstDisabled: false
+};
+
+
+
+  $scope.tabs = 'az';
+  $scope.classp = 'active-tab';
+  $scope.classv = '';
+
+
+  $scope.tabchanges = function(tabs, a) {
+
+      $scope.tabs = tabs;
+      if (a == 1) {
+
+          $scope.classp = "active-tab";
+          $scope.classv = '';
+
+      } else {
+
+          $scope.classp = '';
+          $scope.classv = "active-tab";
+      }
+  };
+$scope.shape=[
+  'img/s1.png',
+  'img/s2.png',
+  'img/s3.png',
+  'img/s4.png'
+];
   $scope.product=[{
     name:"LABORATORY APPARATUS  ",
     img:"img/5.jpg"
