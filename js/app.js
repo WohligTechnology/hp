@@ -28,25 +28,30 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'CareersCtrl'
   })
-    .state('engineering-product', {
-    url: "/engineering-product",
+    .state('crucibles-dishes', {
+    url: "/crucibles-dishes",
     templateUrl: "views/template.html",
-    controller: 'EngineeringProductCtrl'
+    controller: 'CruciblesDishesCtrl'
   })
-    .state('electrical-product', {
-    url: "/electrical-product",
+    .state('electrical-home', {
+    url: "/electrical-home",
     templateUrl: "views/template.html",
-    controller: 'ElectricalProductCtrl'
+    controller: 'ElectricalHomeCtrl'
   })
-    .state('electrical-inner', {
-    url: "/electrical-inner",
+    .state('rivets', {
+    url: "/rivets",
     templateUrl: "views/template.html",
-    controller: 'ElectricalInnerCtrl'
+    controller: 'RivetsCtrl'
   })
-    .state('product-inside', {
-    url: "/product-inside",
+    .state('profile', {
+    url: "/profile",
     templateUrl: "views/template.html",
-    controller: 'ProductInsideCtrl'
+    controller: 'ProfileCtrl'
+  })
+    .state('engineering-home', {
+    url: "/engineering-home",
+    templateUrl: "views/template.html",
+    controller: 'EngineeringHomeCtrl'
   })
     .state('products', {
     url: "/products",

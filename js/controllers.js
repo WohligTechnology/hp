@@ -41,9 +41,84 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
-.controller('ElectricalInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  $scope.template = TemplateService.changecontent("electrical-inner");
-  $scope.menutitle = NavigationService.makeactive("Electrical Inner");
+.controller('RivetsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("rivets");
+  $scope.menutitle = NavigationService.makeactive("Rivets");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.oneAtATime = true;
+
+  $scope.status = {
+isCustomHeaderOpen: false,
+isFirstOpen: true,
+isFirstDisabled: false
+};
+
+
+
+  $scope.tabs = 'az';
+  $scope.classp = 'active-tab';
+  $scope.classv = '';
+
+
+  $scope.tabchanges = function(tabs, a) {
+
+      $scope.tabs = tabs;
+      if (a == 1) {
+
+          $scope.classp = "active-tab";
+          $scope.classv = '';
+
+      } else {
+
+          $scope.classp = '';
+          $scope.classv = "active-tab";
+      }
+  };
+$scope.shape=[
+  'img/s1.png',
+  'img/s2.png',
+  'img/s3.png',
+  'img/s4.png'
+];
+  $scope.product=[{
+    name:"LABORATORY APPARATUS  ",
+    img:"img/5.jpg"
+  },{
+    name:"SPUTTER TARGETS ",
+    img:"img/6.jpg"
+  },{
+    name:"PRECIOUS METALGAUZES & Allied Services ",
+    img:"img/7.jpg"
+  },{
+    name:"Platinum/ Rhodium alloy stirrers ",
+    img:"img/8.jpg"
+  },{
+    name:"Precious Metal management ",
+    img:"img/9.jpg"
+  },{
+    name:"SPUTTER TARGETS  ",
+    img:"img/10.jpg"
+  },{
+    name:"Platinum/ Rhodium alloy stirrers",
+    img:"img/11.jpg"
+  },{
+    name:"LABORATORY APPARATUS  ",
+    img:"img/5.jpg"
+  }];
+})
+.controller('ProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("profile");
+  $scope.menutitle = NavigationService.makeactive("Profile");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+
+})
+.controller('EngineeringHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("engineering-home");
+  $scope.menutitle = NavigationService.makeactive("engineering-home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -122,9 +197,9 @@ $scope.shape=[
   $scope.navigation = NavigationService.getnav();
 
 })
-.controller('ElectricalProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  $scope.template = TemplateService.changecontent("electrical-product");
-  $scope.menutitle = NavigationService.makeactive("Electrical-Product");
+.controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("electrical-home");
+  $scope.menutitle = NavigationService.makeactive("Electrical Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -164,9 +239,9 @@ $scope.shape=[
   }];
 
 })
-.controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  $scope.template = TemplateService.changecontent("engineering-product");
-  $scope.menutitle = NavigationService.makeactive("Engineering Product");
+.controller('CruciblesDishesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  $scope.template = TemplateService.changecontent("crucibles-dishes");
+  $scope.menutitle = NavigationService.makeactive("Crucibles Dishes");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
     $scope.oneAtATime = true;
