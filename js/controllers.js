@@ -41,6 +41,56 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("press");
+        $scope.menutitle = NavigationService.makeactive("Press");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.get = [{
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }, {
+            year: "2012"
+        }];
+
+        $scope.img=[
+          'img/pr1.jpg',
+          'img/pr2.jpg',
+          'img/pr3.jpg',
+          'img/pr4.jpg',
+          'img/pr1.jpg',
+          'img/pr2.jpg',
+          'img/pr3.jpg',
+          'img/pr4.jpg'
+        ];
+
+    })
     .controller('RivetsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("rivets");
         $scope.menutitle = NavigationService.makeactive("Rivets");
