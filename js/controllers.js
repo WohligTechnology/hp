@@ -130,6 +130,58 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
+        $scope.get = [{
+            name: "EUROPE",
+            email: "contacteu@hp.co.in"
+        }, {
+            name: "REST OF THE WORLD",
+            email: "contacteu@hp.co.in"
+        }];
+        $scope.download = [{
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }, {
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }];
+
+
+
+    })
+    .controller('ElectrodesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("electrodes");
+        $scope.menutitle = NavigationService.makeactive("Electrodes");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.tabs = 'az';
+        $scope.classp = 'active-tab';
+        $scope.classv = '';
+        $scope.classq = '';
+
+
+        $scope.tabchanges = function(tabs, a) {
+
+            $scope.tabs = tabs;
+            if (a == 1) {
+
+                $scope.classp = "active-tab";
+                $scope.classv = '';
+                $scope.classq = '';
+
+            } else if (a == 2) {
+
+                $scope.classp = '';
+                $scope.classq = '';
+                $scope.classv = "active-tab";
+            } else {
+
+                $scope.classp = '';
+                $scope.classv = '';
+                $scope.classq = "active-tab";
+            }
+        };
+
 
     })
     .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
