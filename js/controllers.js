@@ -204,6 +204,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
+    .controller('MicroPlatinumCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("micro-platinum");
+        $scope.menutitle = NavigationService.makeactive("Micro Platinum");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+
+    })
     .controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("engineering-product");
         $scope.menutitle = NavigationService.makeactive("Engineering Product");
