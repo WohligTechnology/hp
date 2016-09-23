@@ -441,6 +441,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('MetalCompoundCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("metal-compound");
+        $scope.menutitle = NavigationService.makeactive("Metal-Compound");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
     .controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrical-home");
         $scope.menutitle = NavigationService.makeactive("Electrical Home");
@@ -530,6 +537,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Services");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+        $scope.tabs = 'az';
+        $scope.classp = 'active-tab';
+        $scope.classv = '';
+
+
+        $scope.tabchanges = function(tabs, a) {
+
+            $scope.tabs = tabs;
+            if (a == 1) {
+
+                $scope.classp = "active-tab";
+                $scope.classv = '';
+
+            } else {
+
+                $scope.classp = '';
+                $scope.classv = "active-tab";
+            }
+        };
 
     })
 

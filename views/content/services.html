@@ -1,0 +1,140 @@
+<section>
+    <div class="hp-top-banner">
+        <img src="img/hp-services.jpg" alt="Hindustan Platinum" class="img-responsive">
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hp-pr-decs">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                        with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p>
+                </div>
+                <div class="hp-acc-services">
+                    <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="panel-default" is-open="status.open">
+                            <uib-accordion-heading>
+                                Recovery & Refining
+                            </uib-accordion-heading>
+                            <div class="hp-dt-in">
+                                <p>APetrochemical Industries & Oil Refineries employ different types of precious metal catalysts depending on their application, having supports of soluble or insoluble alumina, silica/alumina, zeolites, carbon, etc. Over
+                                    a period of years, no matter which congiguration is used, eventually the catalysts lose their effectiveness, and the remaining precious metals must be recovered.</p>
+                                <p>
+                                    Hidustan Platinum provides such industries both large and small with integrated services of recovery and refining of precious metals either on toll refining basis or on out-right purchase. Located n Navi Mumbai, India, Hindustan Platinum refines platinum,
+                                    palladium, rhodium, irridium, gold, silver as well as rhenium from many diverse industrial sources, typically from Petrochemicals & Oil refineries. A few of the catalysts refined are paraxylene catalyst, Reforming catalyst,
+                                    Isomerisation catalyst, PTA catalyst, VAM catalyst, Ethylene oxide catalyst, etc.
+                                </p>
+                                <p>
+
+                                    With an excellent reputation of more than four decades, Hidustan Platinum has establised itself as an organization of integrity and reliability - a fact supported by many satisfied customers.
+                                </p>
+                                <p>
+
+                                    The entire cycle of precious metal recovery is conducted through standardized, environmentally friendy processes. We deliver high yield, high purity final products from both high-grade and low-grade materials.
+                                </p>
+                                <div class="text-center">
+                                    <div class="hp-tab-btn">
+                                        <div class="btn-group">
+                                            <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}}">pharmaceutical</button>
+                                            <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}}">PETROCHEMICAL </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="az" ng-if="tabs=='az'">
+                                    <div class="text-center">
+                                        <img src="img/hp-sr.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="az" ng-if="tabs=='bz'">
+                                    <div class="text-center">
+                                        <img src="img/hp-sr.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div uib-accordion-group class="panel-default">
+                            <uib-accordion-heading>
+                                Recycling
+                            </uib-accordion-heading>
+                        </div>
+                        <div uib-accordion-group class="panel-default">
+                            <uib-accordion-heading>
+                                Plant Cleaning Services
+                            </uib-accordion-heading>
+                        </div>
+                        <div uib-accordion-group class="panel-default">
+                            <uib-accordion-heading>
+                                Precious Metal Management
+                            </uib-accordion-heading>
+                        </div>
+
+                    </uib-accordion>
+                </div>
+                <div class="hp-cl-title">
+                  <h4>We are ISO Certified</h4>
+                  <ul>
+                    <li>
+                      <a href=""><img src="img/cl1.jpg" alt="Hindustan Platinum"></a>
+                    </li>
+                    <li>
+                      <a href=""><img src="img/cl2.jpg" alt="Hindustan Platinum"></a>
+                    </li>
+                    <li>
+                      <a href=""><img src="img/cl3.jpg" alt="Hindustan Platinum"></a>
+                    </li>
+                    <li>
+                      <a href=""><img src="img/cl4.jpg" alt="Hindustan Platinum"></a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+  <div class="hp-get-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h4>GET IN TOUCH</h4>
+            <div class="hp-gt">
+              <flex-slider flex-slide="s in get track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
+                  <li>
+                    <div class="hp-cn">
+                      <h4>{{s.name}}</h4>
+                      <p>or info related queries email </p>
+                      <p>us on <a href="">{{s.email}}</a></p>
+                    </div>
+                  </li>
+              </flex-slider>
+
+            </div>
+            <div class="hp-dn">
+              <flex-slider flex-slide="s in download track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
+                  <li>
+                    <div class="hp-dn-icon">
+                      <img src="img/download.png" alt="Hindustan Platinum">
+                    </div>
+                    <div class="hp-dn-txt">
+                      <span>{{s.name}}</span>
+                    </div>
+                  </li>
+              </flex-slider>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
