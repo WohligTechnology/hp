@@ -186,13 +186,43 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             'img/e1.png',
             'img/e2.png',
             'img/e3.png'
-  ];
+        ];
     })
     .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("temperature-sensing");
         $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+
+    })
+    .controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("engineering-product");
+        $scope.menutitle = NavigationService.makeactive("Engineering Product");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.product = [{
+            name: "Crucibles & Dishes ",
+            img: "img/en1.png",
+            link: "img/en1.png"
+        }, {
+            name: "Crucibles & Dishes",
+            img: "img/en2.png",
+            link: "img/en2.png"
+        }, {
+            name: "Other Platinum Labware",
+            img: "img/en3.png",
+            link: "img/en3.png"
+        }, {
+            name: "Micro Chemical Apparatus",
+            img: "img/en4.png",
+            link: "img/en4.png"
+        }, {
+            name: "Temperature Sensing Products",
+            img: "img/en5.png",
+            link: "img/en5.png"
+        }];
 
 
     })
