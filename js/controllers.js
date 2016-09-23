@@ -132,6 +132,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
+    .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("temperature-sensing");
+        $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+
+    })
     .controller('SemiFinishedCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("semi-finished");
         $scope.menutitle = NavigationService.makeactive("Semi-Finished");
