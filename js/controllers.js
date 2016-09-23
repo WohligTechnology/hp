@@ -182,7 +182,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
         };
 
-
+        $scope.shape = [
+            'img/e1.png',
+            'img/e2.png',
+            'img/e3.png'
+  ];
     })
     .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("temperature-sensing");
