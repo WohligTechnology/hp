@@ -41,6 +41,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('GetAnswerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("get-answer");
+        $scope.menutitle = NavigationService.makeactive("get-answer");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.dn = [{
+            name: "Download Form ",
+            img: "img/d1.png",
+            no:"1"
+        }, {
+            name: "FILL THE FORM ",
+            img: "img/d2.png",
+            no:"2"
+        }, {
+            name: "UPLOAD THEFORM ",
+            img: "img/d3.png",
+            no:"3"
+        }];
+
+    })
     .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("press");
         $scope.menutitle = NavigationService.makeactive("Press");
@@ -79,15 +100,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             year: "2012"
         }];
 
-        $scope.img=[
-          'img/pr1.jpg',
-          'img/pr2.jpg',
-          'img/pr3.jpg',
-          'img/pr4.jpg',
-          'img/pr1.jpg',
-          'img/pr2.jpg',
-          'img/pr3.jpg',
-          'img/pr4.jpg'
+        $scope.img = [
+            'img/pr1.jpg',
+            'img/pr2.jpg',
+            'img/pr3.jpg',
+            'img/pr4.jpg',
+            'img/pr1.jpg',
+            'img/pr2.jpg',
+            'img/pr3.jpg',
+            'img/pr4.jpg'
         ];
 
     })

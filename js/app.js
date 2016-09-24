@@ -38,6 +38,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'PressCtrl'
   })
+    .state('get-answer', {
+    url: "/get-answer",
+    templateUrl: "views/template.html",
+    controller: 'GetAnswerCtrl'
+  })
     .state('platinum-labware', {
     url: "/platinum-labware",
     templateUrl: "views/template.html",
