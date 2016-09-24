@@ -41,6 +41,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('KnowCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("know-catalyst");
+        $scope.menutitle = NavigationService.makeactive("Know Catalyst");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
+    .controller('MetalCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("metal-catalyst");
+        $scope.menutitle = NavigationService.makeactive("Metal Catalyst");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
     .controller('GetAnswerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("get-answer");
         $scope.menutitle = NavigationService.makeactive("get-answer");

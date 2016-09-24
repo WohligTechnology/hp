@@ -38,6 +38,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'PressCtrl'
   })
+    .state('know-catalyst', {
+    url: "/know-catalyst",
+    templateUrl: "views/template.html",
+    controller: 'KnowCatalystCtrl'
+  })
+    .state('metal-catalyst', {
+    url: "/metal-catalyst",
+    templateUrl: "views/template.html",
+    controller: 'MetalCatalystCtrl'
+  })
     .state('get-answer', {
     url: "/get-answer",
     templateUrl: "views/template.html",
