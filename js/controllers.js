@@ -46,21 +46,42 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Know Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-var vm = this;
-        vm.peopleObj = {
-  '1' : { name: 'Adam',      email: 'adam@email.com',      age: 12, country: 'United States' },
-  '2' : { name: 'Amalie',    email: 'amalie@email.com',    age: 12, country: 'Argentina' },
-  '3' : { name: 'Estefanía', email: 'estefania@email.com', age: 21, country: 'Argentina' },
-  '4' : { name: 'Adrian',    email: 'adrian@email.com',    age: 21, country: 'Ecuador' },
-  '5' : { name: 'Wladimir',  email: 'wladimir@email.com',  age: 30, country: 'Ecuador' },
-  '6' : { name: 'Samantha',  email: 'samantha@email.com',  age: 30, country: 'United States' },
-  '7' : { name: 'Nicole',    email: 'nicole@email.com',    age: 43, country: 'Colombia' },
-  '8' : { name: 'Natasha',   email: 'natasha@email.com',   age: 54, country: 'Ecuador' },
-  '9' : { name: 'Michael',   email: 'michael@email.com',   age: 15, country: 'Colombia' },
-  '10' : { name: 'Nicolás',   email: 'nicolas@email.com',    age: 43, country: 'Colombia' }
-};
 
-vm.person = {};
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
+
+        $scope.tabs = 'az';
+        $scope.classp = 'active-tab';
+        $scope.classv = '';
+        $scope.classq = '';
+
+
+        $scope.tabchanges = function(tabs, a) {
+
+            $scope.tabs = tabs;
+            if (a == 1) {
+
+                $scope.classp = "active-tab";
+                $scope.classv = '';
+                $scope.classq = '';
+
+            } else if (a == 2) {
+
+                $scope.classp = '';
+                $scope.classq = '';
+                $scope.classv = "active-tab";
+            } else {
+
+                $scope.classp = '';
+                $scope.classv = '';
+                $scope.classq = "active-tab";
+            }
+        };
 
     })
     .controller('MetalCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
