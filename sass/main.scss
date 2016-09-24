@@ -13,6 +13,7 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger:  #fc483f !default;
 $brand-info:    #000072 !default;
+$brand-base:    #383838 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
   padding-top: 70px;
@@ -36,6 +37,34 @@ nav li:hover .dropdown-menu {
 #map img {
   opacity: 1;
 }
+img {
+    opacity: 0;
+    @include transition(all 300ms ease);
+}
+img.doneLoading {
+    opacity: 1;
+}
+/* mixing*/
+@mixin placeholder {
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+    @each $placeholder in $placeholders {
+        &:#{$placeholder}-placeholder {
+            @content;
+        }
+    }
+}
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+@mixin x-appearance ($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+}
+
 a, .btn,[ui-sref] {
   cursor: pointer;
   @include transition(all ease 300ms);
@@ -55,7 +84,45 @@ a, .btn,[ui-sref] {
   outline: 0;
   @include box-shadow(none);
 }
-
+.color-primary{
+  color:$brand-primary;
+}
+.color-base{
+  color:$brand-base;
+}
+.margin0{
+  margin: 0px;
+}
+.padding0{
+  padding: 0px;
+}
+.hp-list{
+  ul{
+    list-style: none;
+    display: block;
+    li{
+      display: inline-block;
+    }
+  }
+}
+.display-inline{
+  display: inline-block;
+}
+.hp-relative{
+  position: relative;
+}
+.hp-absulate{
+  position: absolute;
+}
+.text-up {
+    text-transform: uppercase;
+}
+.text-cap {
+    text-transform: capitalize;
+}
+.margin-auto {
+    margin: 0 auto;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
