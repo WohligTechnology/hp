@@ -446,6 +446,30 @@ padding: 7px 3px;
 border-radius: 8px;
 width: 60%;
 }
+.pt20{
+  padding-top: 20px;
+}
+.hp-eng-box {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    display: block;
+}
+.overl-lay-blue {
+    background-color: rgba(14, 139, 225, 0.77);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.pad-cl{
+  padding-left: 8px;
+padding-right: 8px;
+    padding-bottom: 16px;
+}
+.pad60{
+      padding: 60px 0px;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
