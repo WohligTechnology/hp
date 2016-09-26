@@ -584,6 +584,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Crucibles Dishes");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
         $scope.oneAtATime = true;
 
         $scope.status = {

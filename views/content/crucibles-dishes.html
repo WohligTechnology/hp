@@ -1,13 +1,15 @@
-<section>
-    <div class="hp-top-banner">
-        <img src="img/hp-en-pr.jpg" alt="Hindustan Platinum" class="img-responsive">
+<section class="bg-grediant">
+    <div class="container">
+        <div class="hp-top-banner">
+            <img src="img/hp-en-pr.jpg" alt="Hindustan Platinum" class="img-responsive width100">
+        </div>
     </div>
 </section>
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="hp-pr-decs">
+                <div class="hp-pr-decs pd45">
                     <p>
                         Considering the chemical stability and resistance to oxidation and corrosion, crucibles and dishes of Platinum and Platinum alloys are mainly used as equipment in Research and Development.
                     </p>
@@ -31,12 +33,12 @@
                             </uib-accordion-heading>
                             <div class="">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-offset-1 col-md-10">
                                         <div class="text-center">
                                             <div class="hp-tab-btn">
                                                 <div class="btn-group">
-                                                    <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}}">Crucibles shape ‘AZ’</button>
-                                                    <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}}">Crucibles shape ‘BZ’</button>
+                                                    <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}} btn-blue font-bold text-up">Crucibles shape ‘AZ’</button>
+                                                    <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}} btn-blue font-bold text-up">Crucibles shape ‘BZ’</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -45,46 +47,67 @@
 
                                 <div class="az" ng-if="tabs=='az'">
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="hp-pro-inner">
-                                                <img src="img/hp-pr-inner.jpg" alt="Hindustan Platinum" class="img-responsive">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="hp-cm-data">
-                                                <p>Crucibles in these series have nominal capacities ranging from 5cc to 250cc. These crucibles are designed with extra thick base to withstand heavy wear. Unless otherwise specified crucibles are always supplied
-                                                    having plain rim and with lid. The purity of Platinum used for manufacture of these crucibles is at least 99.95%.</p>
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="hp-pro-inner">
+                                                        <img src="img/hp-pr-inner.jpg" alt="Hindustan Platinum" class="img-responsive">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="hp-cm-data">
+                                                        <p>Crucibles in these series have nominal capacities ranging from 5cc to 250cc. These crucibles are designed with extra thick base to withstand heavy wear. Unless otherwise specified crucibles are always
+                                                            supplied having plain rim and with lid. The purity of Platinum used for manufacture of these crucibles is at least 99.95%.</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="hp-tbl-en">
-                                                <table class="table">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="hp-tbl-en mt20">
+                                                <table class="table b-all">
                                                     <thead>
                                                         <tr>
                                                             <th>
                                                                 No.
                                                             </th>
                                                             <th>
-                                                                Capacity cc
+                                                                Capacity
+                                                                <br> cc
                                                             </th>
                                                             <th>
-                                                                Top Diameter mm
+                                                                Top Diameter
+                                                                <br> mm
                                                             </th>
                                                             <th>
-                                                                Height mm
+                                                                Height
+                                                                <br> mm
                                                             </th>
-                                                            <th>
-                                                                Approximate Weights in Gms.
-                                                                <table>
+                                                            <th class="cs-table">
+
+                                                                <table class="table margin0 ">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Standard From</th>
-                                                                            <th> With Reinforced Rim Only</th>
-                                                                            <th>Standard Cover Only</th>
+                                                                            <th colspan="3" class="text-center"> Approximate
+                                                                                <br> Weights in Gms.</th>
+                                                                            <!-- <th colspan="6">Standard <br> From</th>
+                                                                            <th colspan="6"> With <br>Reinforced <br> Rim Only</th>
+                                                                            <th colspan="6">Standard <br>Cover <br> Only</th> -->
                                                                         </tr>
                                                                     </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Standard
+                                                                                <br> From</td>
+                                                                            <td>With
+                                                                                <br>Reinforced
+                                                                                <br> Rim Only</td>
+                                                                            <td>Standard
+                                                                                <br>Cover
+                                                                                <br> Only</td>
+                                                                        </tr>
+                                                                    </tbody>
                                                                 </table>
                                                             </th>
                                                         </tr>
@@ -95,8 +118,8 @@
                                                             <td>5</td>
                                                             <td>22</td>
                                                             <td>22</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>4</td>
@@ -112,8 +135,8 @@
                                                             <td>8</td>
                                                             <td>25</td>
                                                             <td>24</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>6</td>
@@ -129,8 +152,8 @@
                                                             <td>10</td>
                                                             <td>25</td>
                                                             <td>28</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>7</td>
@@ -146,8 +169,8 @@
                                                             <td>15</td>
                                                             <td>30</td>
                                                             <td>31</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>11</td>
@@ -163,8 +186,8 @@
                                                             <td>20</td>
                                                             <td>33</td>
                                                             <td>35</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>15</td>
@@ -180,8 +203,8 @@
                                                             <td>25</td>
                                                             <td>36</td>
                                                             <td>34</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>19</td>
@@ -197,8 +220,8 @@
                                                             <td>30</td>
                                                             <td>40</td>
                                                             <td>36</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>22</td>
@@ -214,8 +237,8 @@
                                                             <td>35</td>
                                                             <td>41</td>
                                                             <td>38</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>25</td>
@@ -231,8 +254,8 @@
                                                             <td>40</td>
                                                             <td>42</td>
                                                             <td>42</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>30</td>
@@ -248,8 +271,8 @@
                                                             <td>50</td>
                                                             <td>45</td>
                                                             <td>44</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>38</td>
@@ -265,8 +288,8 @@
                                                             <td>60</td>
                                                             <td>45</td>
                                                             <td>47</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>46</td>
@@ -282,8 +305,8 @@
                                                             <td>70</td>
                                                             <td>49</td>
                                                             <td>53</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>50</td>
@@ -299,8 +322,8 @@
                                                             <td>80</td>
                                                             <td>52</td>
                                                             <td>53</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>51</td>
@@ -316,8 +339,8 @@
                                                             <td>90</td>
                                                             <td>54</td>
                                                             <td>57</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>52</td>
@@ -333,8 +356,8 @@
                                                             <td>100</td>
                                                             <td>56</td>
                                                             <td>57</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>59</td>
@@ -350,8 +373,8 @@
                                                             <td>110</td>
                                                             <td>57</td>
                                                             <td>60</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>68</td>
@@ -367,8 +390,8 @@
                                                             <td>120</td>
                                                             <td>64</td>
                                                             <td>66</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>84</td>
@@ -384,8 +407,8 @@
                                                             <td>150</td>
                                                             <td>65</td>
                                                             <td>69</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>100</td>
@@ -401,8 +424,8 @@
                                                             <td>200</td>
                                                             <td>79</td>
                                                             <td>65</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>150</td>
@@ -418,8 +441,8 @@
                                                             <td>250</td>
                                                             <td>81</td>
                                                             <td>73</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>175</td>
@@ -434,53 +457,80 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="hp-size">
-                                            <span>Other sizes available on request.</span>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="hp-size">
+                                                <span>Other sizes available on request.</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bz" ng-if="tabs=='bz'">
+
+                                <div class="az" ng-if="tabs=='bz'">
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="hp-pro-inner">
-                                                <img src="img/hp-pr-inner.jpg" alt="Hindustan Platinum" class="img-responsive">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="hp-cm-data">
-                                                <p>Crucibles in these series have nominal capacities ranging from 5cc to 250cc. These crucibles are designed with extra thick base to withstand heavy wear. Unless otherwise specified crucibles are always supplied
-                                                    having plain rim and with lid. The purity of Platinum used for manufacture of these crucibles is at least 99.95%.</p>
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="hp-pro-inner">
+                                                        <img src="img/hp-pr-inner.jpg" alt="Hindustan Platinum" class="img-responsive">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="hp-cm-data">
+                                                        <p>Crucibles in these series have nominal capacities ranging from 5cc to 250cc. These crucibles are designed with extra thick base to withstand heavy wear. Unless otherwise specified crucibles are always
+                                                            supplied having plain rim and with lid. The purity of Platinum used for manufacture of these crucibles is at least 99.95%.</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="hp-tbl-en">
-                                                <table class="table">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="hp-tbl-en mt20">
+                                                <table class="table b-all">
                                                     <thead>
                                                         <tr>
                                                             <th>
                                                                 No.
                                                             </th>
                                                             <th>
-                                                                Capacity cc
+                                                                Capacity
+                                                                <br> cc
                                                             </th>
                                                             <th>
-                                                                Top Diameter mm
+                                                                Top Diameter
+                                                                <br> mm
                                                             </th>
                                                             <th>
-                                                                Height mm
+                                                                Height
+                                                                <br> mm
                                                             </th>
-                                                            <th>
-                                                                Approximate Weights in Gms.
-                                                                <table>
+                                                            <th class="cs-table">
+
+                                                                <table class="table margin0 ">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Standard From</th>
-                                                                            <th> With Reinforced Rim Only</th>
-                                                                            <th>Standard Cover Only</th>
+                                                                            <th colspan="3" class="text-center"> Approximate
+                                                                                <br> Weights in Gms.</th>
+                                                                            <!-- <th colspan="6">Standard <br> From</th>
+                                                                            <th colspan="6"> With <br>Reinforced <br> Rim Only</th>
+                                                                            <th colspan="6">Standard <br>Cover <br> Only</th> -->
                                                                         </tr>
                                                                     </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Standard
+                                                                                <br> From</td>
+                                                                            <td>With
+                                                                                <br>Reinforced
+                                                                                <br> Rim Only</td>
+                                                                            <td>Standard
+                                                                                <br>Cover
+                                                                                <br> Only</td>
+                                                                        </tr>
+                                                                    </tbody>
                                                                 </table>
                                                             </th>
                                                         </tr>
@@ -491,8 +541,8 @@
                                                             <td>5</td>
                                                             <td>22</td>
                                                             <td>22</td>
-                                                            <td>
-                                                                <table>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>4</td>
@@ -503,21 +553,350 @@
                                                                 </table>
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <td>102</td>
+                                                            <td>8</td>
+                                                            <td>25</td>
+                                                            <td>24</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>6</td>
+                                                                            <td>7</td>
+                                                                            <td>1.5</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>103</td>
+                                                            <td>10</td>
+                                                            <td>25</td>
+                                                            <td>28</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>7</td>
+                                                                            <td>7.5</td>
+                                                                            <td>2</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>104</td>
+                                                            <td>15</td>
+                                                            <td>30</td>
+                                                            <td>31</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>11</td>
+                                                                            <td>12</td>
+                                                                            <td>3</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>105</td>
+                                                            <td>20</td>
+                                                            <td>33</td>
+                                                            <td>35</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>15</td>
+                                                                            <td>16</td>
+                                                                            <td>4</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>106</td>
+                                                            <td>25</td>
+                                                            <td>36</td>
+                                                            <td>34</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>19</td>
+                                                                            <td>20</td>
+                                                                            <td>4</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>107</td>
+                                                            <td>30</td>
+                                                            <td>40</td>
+                                                            <td>36</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>22</td>
+                                                                            <td>24</td>
+                                                                            <td>46</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>108</td>
+                                                            <td>35</td>
+                                                            <td>41</td>
+                                                            <td>38</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>25</td>
+                                                                            <td>26</td>
+                                                                            <td>6</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>109</td>
+                                                            <td>40</td>
+                                                            <td>42</td>
+                                                            <td>42</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>30</td>
+                                                                            <td>32</td>
+                                                                            <td>7</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>110</td>
+                                                            <td>50</td>
+                                                            <td>45</td>
+                                                            <td>44</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>38</td>
+                                                                            <td>40</td>
+                                                                            <td>8</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>111</td>
+                                                            <td>60</td>
+                                                            <td>45</td>
+                                                            <td>47</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>46</td>
+                                                                            <td>48</td>
+                                                                            <td>9</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>112</td>
+                                                            <td>70</td>
+                                                            <td>49</td>
+                                                            <td>53</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>50</td>
+                                                                            <td>52</td>
+                                                                            <td>12</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>113</td>
+                                                            <td>80</td>
+                                                            <td>52</td>
+                                                            <td>53</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>51</td>
+                                                                            <td>54</td>
+                                                                            <td>14</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>114</td>
+                                                            <td>90</td>
+                                                            <td>54</td>
+                                                            <td>57</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>52</td>
+                                                                            <td>59</td>
+                                                                            <td>15</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>115</td>
+                                                            <td>100</td>
+                                                            <td>56</td>
+                                                            <td>57</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>59</td>
+                                                                            <td>68</td>
+                                                                            <td>17</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>116</td>
+                                                            <td>110</td>
+                                                            <td>57</td>
+                                                            <td>60</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>68</td>
+                                                                            <td>71</td>
+                                                                            <td>19</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>117</td>
+                                                            <td>120</td>
+                                                            <td>64</td>
+                                                            <td>66</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>84</td>
+                                                                            <td>88</td>
+                                                                            <td>22</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>118</td>
+                                                            <td>150</td>
+                                                            <td>65</td>
+                                                            <td>69</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>100</td>
+                                                                            <td>104</td>
+                                                                            <td>27</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>119</td>
+                                                            <td>200</td>
+                                                            <td>79</td>
+                                                            <td>65</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>150</td>
+                                                                            <td>159</td>
+                                                                            <td>30</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>120</td>
+                                                            <td>250</td>
+                                                            <td>81</td>
+                                                            <td>73</td>
+                                                            <td class="cs-table">
+                                                                <table class="table margin0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>175</td>
+                                                                            <td>179</td>
+                                                                            <td>32</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="hp-size">
-                                            <span>Other sizes available on request.</span>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-offset-1 col-md-10">
+                                            <div class="hp-size">
+                                                <span>Other sizes available on request.</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
 
                             </div>
                         </div>
                         <div uib-accordion-group class="panel-default">
                             <uib-accordion-heading>
-                                Platinum Crucibles
+                                Dishes
                             </uib-accordion-heading>
                             This is just some content to illustrate fancy headings.
                         </div>

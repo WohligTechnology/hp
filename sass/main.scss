@@ -215,11 +215,19 @@ a {
 }
 .btn-blue {
     @include button-variant($brand-primary, transparent, $brand-primary);
+    border: 1px solid #0d9dff;
     &:hover {
         outline: 0;
     }
     &:focus {
         outline: 0;
+        border-color: #0d9dff;
+    }
+    &:active {
+        &:focus {
+            outline: 0;
+            border-color: #0d9dff;
+        }
     }
 }
 .btn-padding {
@@ -384,70 +392,68 @@ a {
 }
 .bg-grediant {
     // background: linear-gradient(to right, #ffffff 20%,#0e8ae0 0%,#0e8ae0 100%);
-    @include background(linear-gradient(to right, #ffffff 20%,#0e8ae0 0%,#0e8ae0 100%));
-        margin-top: 135px;
+    @include background(linear-gradient(to right, #ffffff 22%,#0e8ae0 0%,#0e8ae0 100%));
+    margin-top: 135px;
 }
-.pd45{
-    padding: 45px 0px;
+.pd45 {
+    padding: 45px 0;
 }
-.hp-cl-title{
-      padding: 30px 0px 30px 0px;
+.hp-cl-title {
+    padding: 30px 0;
 }
-.hp-pr-decs{
-  p{
-    color: $brand-base;
-    line-height: 150%;
-    font-weight: 400;
-    font-size: 15px;
-
-  }
+.hp-pr-decs {
+    p {
+        color: $brand-base;
+        line-height: 150%;
+        font-weight: 400;
+        font-size: 15px;
+    }
 }
-.hp-get-sec{
-  background: url(../img/hp-sli-bg.jpg)no-repeat;
+.hp-get-sec {
+    background: url(../img/hp-sli-bg.jpg)no-repeat;
     background-size: cover;
 }
-.hp-gt{
-  .flexslider {
-    margin: 0 0 0px;
-    background: rgba(255, 255, 255, 0);
-    border: 0px solid #fff;
-  }
-}
-.if-no-slider{
-  ul{
-    li{
-          padding: 0px 25px;
+.hp-gt {
+    .flexslider {
+        margin: 0;
+        background: rgba(255, 255, 255, 0);
+        border: 0 solid #fff;
     }
-  }
 }
-
-.hp-cn{
-  h3{
-    margin-bottom: 5px;
-  }
-  p{
-    margin: 0px;
-    line-height: 125%;
-  }
+.if-no-slider {
+    ul {
+        li {
+            padding: 0 25px;
+        }
+    }
 }
-.hp-dn-icon{
-      display: initial;
-  img{
+.hp-cn {
+    h3 {
+        margin-bottom: 5px;
+    }
+    p {
+        margin: 0;
+        line-height: 125%;
+    }
+}
+.hp-dn-icon {
+    display: initial;
+    img {
         width: 50px;
-            vertical-align: bottom;
-  }
+        vertical-align: bottom;
+    }
 }
-.p20{
-      padding: 20px 0px;
+.p20 {
+    padding: 20px 0;
 }
-.hp-dn-txt{
-  background: #0d9dff;
-padding: 7px 3px;
-border-radius: 8px;
-width: 60%;
+.hp-dn-txt {
+    background: #0d9dff;
+    padding: 7px 3px;
+    border-radius: 8px;
+    width: 60%;
 }
-.pt20{
-  padding-top: 20px;
+.pt20 {
+    padding-top: 20px;
 }
 .hp-eng-box {
     position: relative;
@@ -462,13 +468,90 @@ width: 60%;
     position: absolute;
     top: 0;
 }
-.pad-cl{
-  padding-left: 8px;
-padding-right: 8px;
+.pad-cl {
+    padding-left: 8px;
+    padding-right: 8px;
     padding-bottom: 16px;
 }
-.pad60{
-      padding: 60px 0px;
+.pad60 {
+    padding: 60px 0;
+}
+.hp-acc {
+    .panel-group .panel {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    .panel-heading {
+        padding: 15px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        color: #8e8e8e;
+        background-color: #ebebeb;
+    }
+    .panel-title {
+        &:focus {
+            outline: 0;
+        }
+        &:active {
+            outline: 0;
+        }
+        a,
+        span {
+            text-decoration: none;
+            &:focus {
+                outline: 0;
+            }
+            &:active {
+                outline: 0;
+            }
+        }
+    }
+}
+.hp-tab-btn {
+    button {
+        padding: 10px 20px 5px;
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
+.active-tab {
+    background-color: $brand-primary !important;
+    color: $white !important;
+}
+.hp-tab-btn {
+    padding: 20px 0 30px;
+}
+.hp-tbl-en {
+    .table {
+        tbody,
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    border-right: 1px solid $brand-primary;
+                    border-bottom: 1px solid $brand-primary;
+                }
+                td {
+                    text-align: center;
+                    border-right: 1px solid $brand-primary;
+                        border-top: 0px solid #ddd;
+                            width: 112px;
+                }
+            }
+        }
+    }
+}
+.cs-table{
+  padding: 0px 0px 0px 0px !important;
+border-right: 0px !important;
+}
+.b-all{
+  border-top: 1px solid #0f8be1;
+border-bottom: 1px solid #0f8be1;
+border-left: 1px solid #0f8be1;
+}
+.mt20{
+  margin-top: 20px;
 }
 //bootstrap forms
 /* Start writing sass here */
