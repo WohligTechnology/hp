@@ -436,6 +436,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("engineering-home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
 
@@ -445,6 +446,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             isFirstDisabled: false
         };
 
+        $scope.get = [{
+            name: "EUROPE",
+            email: "contacteu@hp.co.in"
+        }, {
+            name: "REST OF THE WORLD",
+            email: "contacteu@hp.co.in"
+        }];
+        $scope.download = [{
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }, {
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }];
 
 
         $scope.tabs = 'az';
