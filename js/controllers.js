@@ -31,7 +31,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             img: "img/4.jpg"
         }, {
             name: "Precious Metal management ",
-            img: "img/5.jpg"
+            img: "img/4a.jpg"
         }];
     })
     .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
