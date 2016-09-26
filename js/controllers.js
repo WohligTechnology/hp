@@ -456,9 +456,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.download = [{
             name: "Download - PRECIOUS METAL COMPOUND"
 
-        }, {
-            name: "Download - PRECIOUS METAL COMPOUND"
-
         }];
 
 
