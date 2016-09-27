@@ -477,12 +477,11 @@ a {
     padding: 60px 0;
 }
 .hp-acc {
-  .panel {
-    border: 0px solid transparent;
-
-    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
-}
+    .panel {
+        border: 0 solid transparent;
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
+    }
     .panel-group .panel {
         margin-bottom: 0;
         border-radius: 0;
@@ -540,42 +539,94 @@ a {
                 td {
                     text-align: center;
                     border-right: 1px solid $brand-primary;
-                        border-top: 0px solid #ddd;
-                            width: 112px;
+                    border-top: 0 solid #ddd;
+                    width: 112px;
                 }
             }
         }
     }
 }
-.cs-table{
-  padding: 0px 0px 0px 0px !important;
-border-right: 0px !important;
+.hp-table-dif {
+    @extend .hp-tbl-en;
+    td,
+    th {
+        text-align: center;
+        border-right: 1px solid #ddd !important;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-right: 0 solid #ddd !important;
+        }
+    }
+    thead {
+        tr {
+            th {
+                text-align: center;
+                border-bottom: 1px solid #000000 !important;
+            }
+        }
+    }
+    .main-hp {
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: 0 solid #ddd !important;
+                }
+            }
+        }
+        tr {
+            &:last-child {
+                border-bottom: 0 solid #ddd !important;
+      
+            }
+        }
+    }
 }
-.mt60{
-  margin-top: 60px;
+.cs-table {
+    padding: 0 !important;
+    border-right: 0 !important;
 }
-.b-all{
-  border-top: 1px solid #0f8be1;
-border-bottom: 1px solid #0f8be1;
-border-left: 1px solid #0f8be1;
+.mt60 {
+    margin-top: 60px;
 }
-.pb60{
-  padding-bottom: 60px;
+.b-all {
+    border-top: 1px solid #0f8be1;
+    border-bottom: 1px solid #0f8be1;
+    border-left: 1px solid #0f8be1;
 }
-.mt20{
-  margin-top: 20px;
+.pb60 {
+    padding-bottom: 60px;
 }
-.hp-span{
-  display: block;
-padding-top: 20px;
+.mt20 {
+    margin-top: 20px;
 }
-.wauto{
-  td{
-      min-width: 113px !important;
-  }
+.hp-span {
+    display: block;
+    padding-top: 20px;
 }
-.pl12{
-      padding-left: 12px;
+.wauto {
+    td {
+        min-width: 113px !important;
+    }
+}
+.pl12 {
+    padding-left: 12px;
+}
+.formulae {
+    list-style: none;
+    padding: 0;
+    li {
+        line-height: 86%;
+    }
+    hr {
+        margin-top: 8px;
+        margin-bottom: 6px;
+        border: 0;
+        border-top: 1px solid #000000;
+        width: 70%;
+    }
+}
+.br-all {
+    border: 1px solid #000;
 }
 //bootstrap forms
 /* Start writing sass here */

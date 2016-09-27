@@ -315,6 +315,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
 
 
     })
