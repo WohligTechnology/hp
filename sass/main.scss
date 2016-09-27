@@ -569,6 +569,14 @@ border-left: 1px solid #0f8be1;
   display: block;
 padding-top: 20px;
 }
+.wauto{
+  td{
+      min-width: 113px !important;
+  }
+}
+.pl12{
+      padding-left: 12px;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
