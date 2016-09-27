@@ -167,6 +167,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Rivets");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
 

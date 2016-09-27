@@ -576,7 +576,6 @@ a {
         tr {
             &:last-child {
                 border-bottom: 0 solid #ddd !important;
-
             }
         }
     }
@@ -628,8 +627,55 @@ a {
 .br-all {
     border: 1px solid #000;
 }
-.min-h400{
-  min-height: 400px;
+.min-h400 {
+    min-height: 400px;
+}
+.hp-shape {
+    margin: 50px auto;
+    text-align: center;
+    img {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.hp-dimesion-tbl {
+    .table {
+        text-align: center;
+        border: 1px solid $brand-primary;
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    border-bottom: 1px solid $brand-primary;
+                    border-right: 1px solid $brand-primary;
+                    font-size: 18px;
+                    font-weight: 700;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid $brand-primary;
+                    border-right: 1px solid $brand-primary;
+                    font-size: 18px;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.min-w70 {
+    tr {
+        td {
+            min-width: 70px !important;
+        }
+    }
 }
 //bootstrap forms
 /* Start writing sass here */
