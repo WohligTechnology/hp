@@ -1,13 +1,15 @@
-<section>
-    <div class="hp-top-banner">
-        <img src="img/hp-know.jpg" alt="Hindustan Platinum" class="img-responsive">
+<section class="bg-grediant">
+    <div class="container">
+        <div class="hp-top-banner">
+            <img src="img/hp-know.jpg" alt="Hindustan Platinum" class="img-responsive">
+        </div>
     </div>
 </section>
-<section>
+<section class="pb60">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="hp-pr-decs">
+                <div class="hp-pr-decs pd45">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                         survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
@@ -17,146 +19,162 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
-                <div class="hp-sl">
-                    <h4>Select Reaction</h4>
+            <div class="col-md-offset-2 col-md-2">
+                <div class="hp-sl float-left">
+                    <h3 class="font-bold margin0">Select Reaction</h3>
                 </div>
-                <div class="hp-relative">
-                    <ui-select class="form-control" title="Choose a person">
+            </div>
+            <div class="col-md-6">
+                <div class="hp-relative float-right hp-sl-rec">
+                    <ui-select ng-model="item.selected">
                         <ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
-                        <ui-select-choices repeat="item in ctrl.people | filter: $select.search">
-                            <div ng-bind-html="item.name | highlight: $select.search"></div>
-                            <small ng-bind-html="item.email | highlight: $select.search"></small>
+                        <ui-select-choices repeat="item in data | filter: $select.name">
+                            <div ng-bind-html="item.name | highlight: $select.name"></div>
+                            <small ng-bind-html="item.email | highlight: $select.name"></small>
                         </ui-select-choices>
                     </ui-select>
+<div class="hp-absulate hp-mm">
+  <img src="img/arrow.jpg" alt="Hindustan Platinum">
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="hp-d-rslt mt60">
+                    <h3 class="text-center  color-primary">Displaying Result</h3>
+                <div class="mt60">
+                  <h2 class="font-bold text-center">SELECT METALS</h2>
+                  <div class="hp-tab-btn">
+                      <div class="btn-group">
+                          <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}} btn-blue font-bold text-up text-center">Platinum</button>
+                          <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}} btn-blue font-bold text-up text-center">Paladium</button>
+                          <button type="button" name="button" ng-click="tabchanges('cz',3)" class="{{classq}} btn-blue font-bold text-up text-center">Rhodium </button>
+                      </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="az" ng-if="tabs=='az'">
+              <div class="hp-acc">
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" is-open="status.open">
+                        <uib-accordion-heading>
+                            RD-92
+                        </uib-accordion-heading>
+                        <div class="hp-dt-in">
+                            <p>5%, 10%, PD/C</p>
+
+                        </div>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            RD-124
+                        </uib-accordion-heading>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            RD-162
+                        </uib-accordion-heading>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            RD-169
+                        </uib-accordion-heading>
+                    </div>
+                    <div uib-accordion-group class="panel-default">
+                        <uib-accordion-heading>
+                            RD-172
+                        </uib-accordion-heading>
+                    </div>
+
+                </uib-accordion>
+              </div>
+                </div>
+                <div class="az" ng-if="tabs=='bz'">
+      <div class="hp-acc">
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" is-open="status.open">
+                <uib-accordion-heading>
+                    RD-92
+                </uib-accordion-heading>
+                <div class="hp-dt-in">
+                    <p>5%, 10%, PD/C</p>
 
                 </div>
-<div class="hp-d-rslt">
-  <span>Displaying Result</span>
-  <h4>SELECT METALS</h4>
-  <div class="hp-tab-btn">
-      <div class="btn-group">
-          <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}}">Platinum</button>
-          <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}}">Paladium</button>
-          <button type="button" name="button" ng-click="tabchanges('cz',3)" class="{{classq}}">Rhodium </button>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-124
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-162
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-169
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-172
+                </uib-accordion-heading>
+            </div>
+
+        </uib-accordion>
       </div>
-  </div>
-</div>
+                </div>
+                <div class="az" ng-if="tabs=='cz'">
+      <div class="hp-acc">
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" is-open="status.open">
+                <uib-accordion-heading>
+                    RD-92
+                </uib-accordion-heading>
+                <div class="hp-dt-in">
+                    <p>5%, 10%, PD/C</p>
+
+                </div>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-124
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-162
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-169
+                </uib-accordion-heading>
+            </div>
+            <div uib-accordion-group class="panel-default">
+                <uib-accordion-heading>
+                    RD-172
+                </uib-accordion-heading>
+            </div>
+
+        </uib-accordion>
+      </div>
+                </div>
             </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-                  <div class="az" ng-if="tabs=='az'">
-                    <uib-accordion close-others="oneAtATime">
-                        <div uib-accordion-group class="panel-default" is-open="status.open">
-                            <uib-accordion-heading>
-                                RD-92
-                            </uib-accordion-heading>
-                            <div class="hp-dt-in">
-                                <p>5%, 10%, PD/C</p>
-
-                            </div>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-124
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-162
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                                RD-169
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-172
-                            </uib-accordion-heading>
-                        </div>
-
-                    </uib-accordion>
-                  </div>
-                  <div class="az" ng-if="tabs=='bz'">
-                    <uib-accordion close-others="oneAtATime">
-                        <div uib-accordion-group class="panel-default" is-open="status.open">
-                            <uib-accordion-heading>
-                                RD-92
-                            </uib-accordion-heading>
-                            <div class="hp-dt-in">
-                                <p>5%, 10%, PD/C</p>
-
-                            </div>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-124
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-162
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                                RD-169
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-172
-                            </uib-accordion-heading>
-                        </div>
-
-                    </uib-accordion>
-                  </div>
-                  <div class="az" ng-if="tabs=='cz'">
-                    <uib-accordion close-others="oneAtATime">
-                        <div uib-accordion-group class="panel-default" is-open="status.open">
-                            <uib-accordion-heading>
-                                RD-92
-                            </uib-accordion-heading>
-                            <div class="hp-dt-in">
-                                <p>5%, 10%, PD/C</p>
-
-                            </div>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-124
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-162
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                                RD-169
-                            </uib-accordion-heading>
-                        </div>
-                        <div uib-accordion-group class="panel-default">
-                            <uib-accordion-heading>
-                              RD-172
-                            </uib-accordion-heading>
-                        </div>
-
-                    </uib-accordion>
-                  </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-center">
-              <h4>If you have any queries regarding multiple reactions</h4>
-              <button type="button" name="button">CLICK HERE</button>
+            <div class="col-md-12">
+                <div class="text-center">
+                    <h2 class="font-bold text-up">If you have any queries regarding multiple reactions</h2>
+                    <button type="button" name="button"class="btn-blue color-primary text-up font-bold btn-padding">CLICK HERE</button>
+                </div>
             </div>
-          </div>
         </div>
     </div>
 </section>

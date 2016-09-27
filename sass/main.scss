@@ -694,8 +694,8 @@ a {
         height: 80px;
     }
     .flex-direction-nav a {
-      width: 45px;
-      height: 80px;
+        width: 45px;
+        height: 80px;
         opacity: 1;
     }
     .flex-direction-nav .flex-prev {
@@ -722,27 +722,123 @@ a {
         outline: 0;
     }
 }
-.year-slider{
-  li{
-    a{
-      color:#8e8e8e;
-      font-size: 26px;
-      font-weight: 700;
-      &:hover{
-        text-decoration: none;
-      }
-      &:focus{
-        text-decoration: none;
-      }
-      &:active{
-        text-decoration: none;
+.year-slider {
+    li {
+        a {
+            color: #8e8e8e;
+            font-size: 26px;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+            }
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.mb15 {
+    margin-bottom: 30px;
+}
+.hp-sl {
+    padding-top: 10px;
+    h3 {
+        font-size: 20px;
+    }
+}
+.hp-sl-rec {
+    .btn {
+        padding: 5px 12px;
+        font-size: 14px;
+        line-height: 2.42857;
+        .caret {
+            margin-left: 0;
+            display: none;
+        }
+        &:active {
+            &:focus {
+                background-color: hsla(0, 0%, 90%, 0);
+                border-color: #0e8be1;
+                outline: 0;
+            }
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    .form-control {
+        height: 42px !important;
+        background-color: hsla(0, 0%, 90%, 0);
+        border-color: #0e8be1;
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .ui-select-match {
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .ui-select-match-text {
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    span {
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .ui-select-container {
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .span.btn.btn-default.form-control.ui-select-toggle{
+      outline: 0;
+      &:focus {
+          outline: 0;
       }
     }
-  }
+    .btn-default-focus{
+        box-shadow: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .search-drop.ui-select-container.ui-select-bootstrap.dropdown {
+        outline: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
 }
-
-.mb15{
-  margin-bottom: 30px;
+.hp-mm {
+    top: 0;
+    right: 0;
+    img {
+        width: 42px;
+    }
+}
+.hp-tab-btn{
+  .btn-group{
+    position: relative;
+vertical-align: middle;
+text-align: center;
+margin: 0 auto;
+display: block;
+  }
 }
 //bootstrap forms
 /* Start writing sass here */

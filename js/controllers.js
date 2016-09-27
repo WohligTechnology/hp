@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper', 'ui.select'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.select','ksSwiper'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
@@ -46,6 +46,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Know Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+            TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
 
@@ -82,7 +83,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.classq = "active-tab";
             }
         };
-
+        $scope.data = [{
+            name: "C-C bons hydrogenation Double bonds, Triple bonds"
+        }, {
+            name: "C-N bons hydrogenation Nitriles, Imines, Hydrazones, Oximes"
+        }, {
+            name: "C=Obd hdrogenation Armatialdehdes, Aromaic Ketones"
+        }, {
+            name: "Redutive alkylation / Amination"
+        }, {
+            name: "Nitro / Nitroso group hydrogenation"
+        }, {
+            name: "Hetroaromatic hydrogenation"
+        }, {
+            name: "Aromatic hydrogenation"
+        }]
     })
     .controller('MetalCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-catalyst");
