@@ -1,13 +1,16 @@
-<section>
-    <div class="hp-top-banner">
-        <img src="img/hp-services.jpg" alt="Hindustan Platinum" class="img-responsive">
+<section class="bg-grediant">
+    <div class="container">
+        <div class="hp-top-banner">
+            <img src="img/hp-services.jpg" alt="Hindustan Platinum" class="img-responsive">
+        </div>
     </div>
+
 </section>
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="hp-pr-decs">
+                <div class="hp-pr-decs pd45">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
                         survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
@@ -19,7 +22,7 @@
                         infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                     </p>
                 </div>
-                <div class="hp-acc-services">
+                <div class="hp-acc">
                     <uib-accordion close-others="oneAtATime">
                         <div uib-accordion-group class="panel-default" is-open="status.open">
                             <uib-accordion-heading>
@@ -44,8 +47,8 @@
                                 <div class="text-center">
                                     <div class="hp-tab-btn">
                                         <div class="btn-group">
-                                            <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}}">pharmaceutical</button>
-                                            <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}}">PETROCHEMICAL </button>
+                                            <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}} btn-blue font-bold text-up">pharmaceutical</button>
+                                            <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}} btn-blue font-bold text-up">PETROCHEMICAL </button>
                                         </div>
                                     </div>
                                 </div>
@@ -79,47 +82,58 @@
 
                     </uib-accordion>
                 </div>
-                <div class="hp-cl-title">
-                  <h4>We are ISO Certified</h4>
-                  <ul>
-                    <li>
-                      <a href=""><img src="img/cl1.jpg" alt="Hindustan Platinum"></a>
-                    </li>
-                    <li>
-                      <a href=""><img src="img/cl2.jpg" alt="Hindustan Platinum"></a>
-                    </li>
-                    <li>
-                      <a href=""><img src="img/cl3.jpg" alt="Hindustan Platinum"></a>
-                    </li>
-                    <li>
-                      <a href=""><img src="img/cl4.jpg" alt="Hindustan Platinum"></a>
-                    </li>
-                  </ul>
+                <div class="hp-cl-title text-center hp-list">
+                    <h2 class="color-primary font-bold">We are ISO Certified</h2>
+                    <ul>
+                        <li>
+                            <a href=""><img src="img/cl1.jpg" alt="Hindustan Platinum"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/cl2.jpg" alt="Hindustan Platinum"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/cl3.jpg" alt="Hindustan Platinum"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/cl4.jpg" alt="Hindustan Platinum"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section>
-  <div class="hp-get-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-center">
-            <h4>GET IN TOUCH</h4>
-            <div class="hp-gt">
-              <flex-slider flex-slide="s in get track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
+    <div class="hp-get-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center p20">
+                        <h1 class="color-primary font-bold">GET IN TOUCH</h1>
+                        <div class="hp-gt">
+                            <!-- <flex-slider flex-slide="s in get track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
                   <li>
                     <div class="hp-cn">
-                      <h4>{{s.name}}</h4>
+                      <h3 class="text-up font-bold margin0">{{s.name}}</h3>
                       <p>or info related queries email </p>
                       <p>us on <a href="">{{s.email}}</a></p>
                     </div>
                   </li>
-              </flex-slider>
+              </flex-slider> -->
+                            <div class="if-no-slider hp-list p20">
+                                <ul class="padding0">
+                                    <li ng-repeat="s in get track by $index">
+                                        <div class="hp-cn">
+                                            <h3 class="text-up font-bold margin0">{{s.name}}</h3>
+                                            <p>or info related queries email </p>
+                                            <p>us on <a href="">{{s.email}}</a></p>
+                                        </div>
 
-            </div>
-            <div class="hp-dn">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="hp-dn">
               <flex-slider flex-slide="s in download track by $index" prev-text="" next-text="" item-width="280" item-margin="30"  animation="slide">
                   <li>
                     <div class="hp-dn-icon">
@@ -131,10 +145,25 @@
                   </li>
               </flex-slider>
 
+            </div> -->
+                        <div class="hp-dn hp-list p20">
+                            <ul class="padding0">
+                                <li ng-repeat="s in download track by $index">
+                                    <a href="">
+                                        <div class="hp-dn-icon">
+                                            <img src="img/download.png" alt="Hindustan Platinum">
+                                        </div>
+                                        <div class="hp-dn-txt display-inline">
+                                            <span class="font-bold text-up color-white">{{s.name}}</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+
 </section>

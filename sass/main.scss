@@ -677,6 +677,73 @@ a {
         }
     }
 }
+.hp-rnd-slider {
+    .flex-control-nav {
+        display: none;
+    }
+    .flex-direction-nav a.flex-next:before {
+        content: '';
+        background: url("../img/next.png") no-repeat center;
+        width: 45px;
+        height: 80px;
+    }
+    .flex-direction-nav a.flex-prev:before {
+        content: '';
+        background: url("../img/prev.png") no-repeat center;
+        width: 45px;
+        height: 80px;
+    }
+    .flex-direction-nav a {
+      width: 45px;
+      height: 80px;
+        opacity: 1;
+    }
+    .flex-direction-nav .flex-prev {
+        left: -40px;
+    }
+    .flex-direction-nav .flex-next {
+        right: -40px;
+        text-align: right;
+    }
+    .flexslider:hover .flex-direction-nav .flex-prev:hover {
+        opacity: 1;
+    }
+    .flexslider:hover .flex-direction-nav .flex-next:hover {
+        opacity: 1;
+    }
+    .flexslider:hover .flex-direction-nav .flex-prev {
+        opacity: 1;
+        left: -40px;
+        outline: 0;
+    }
+    .flexslider:hover .flex-direction-nav .flex-next {
+        opacity: 1;
+        right: -40px;
+        outline: 0;
+    }
+}
+.year-slider{
+  li{
+    a{
+      color:#8e8e8e;
+      font-size: 26px;
+      font-weight: 700;
+      &:hover{
+        text-decoration: none;
+      }
+      &:focus{
+        text-decoration: none;
+      }
+      &:active{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mb15{
+  margin-bottom: 30px;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";

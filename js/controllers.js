@@ -1,4 +1,4 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper','ui.select'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper', 'ui.select'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
@@ -100,15 +100,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.dn = [{
             name: "Download Form ",
             img: "img/d1.png",
-            no:"1"
+            no: "1"
         }, {
             name: "FILL THE FORM ",
             img: "img/d2.png",
-            no:"2"
+            no: "2"
         }, {
             name: "UPLOAD THEFORM ",
             img: "img/d3.png",
-            no:"3"
+            no: "3"
         }];
 
     })
@@ -117,37 +117,223 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Press");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+
+        $scope.tabs = '2016';
+        $scope.classa = 'active-tab';
+        $scope.classb = '';
+        $scope.classc = '';
+        $scope.classd = '';
+        $scope.classe = '';
+        $scope.classf = '';
+        $scope.classg = '';
+        $scope.classh = '';
+        $scope.classi = '';
+        $scope.classj = '';
+        $scope.classk = '';
+
+        $scope.tabchanges = function(tabs, a) {
+            $scope.tabs = tabs;
+            if (a == 1) {
+                $scope.classa = "active-tab";
+                $scope.classb = '';
+                $scope.classc = '';
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 2) {
+
+                $scope.classa = '';
+                $scope.classb = "active-tab";
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 3) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "active-tab";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 4) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = 'active-tab';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 5) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = 'active-tab';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 6) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = 'active-tab';
+                $scope.classg = '';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 7) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = 'active-tab';
+                $scope.classh = '';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 8) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classh = 'active-tab';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 9) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classi = 'active-tab';
+                $scope.classh = '';
+                $scope.classj = '';
+                $scope.classk = '';
+            } else if (a == 10) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classj = 'active-tab';
+                $scope.classi = '';
+                $scope.classh = '';
+                $scope.classk = '';
+            } else if (a == 11) {
+
+                $scope.classa = '';
+                $scope.classb = '';
+                $scope.classc = "";
+                $scope.classd = '';
+                $scope.classe = '';
+                $scope.classf = '';
+                $scope.classg = '';
+                $scope.classk = 'active-tab';
+                $scope.classi = '';
+                $scope.classj = '';
+                $scope.classh = '';
+            }
+        };
 
         $scope.get = [{
-            year: "2012"
+            year: "2016",
+            class: "classa",
+            name: "2016",
+            id: "1"
         }, {
-            year: "2012"
+            year: "2015",
+            class: "classb",
+            name: "2015",
+            id: "2"
         }, {
-            year: "2012"
+            year: "2014",
+            class: "classc",
+            name: "2014",
+            id: "3"
         }, {
-            year: "2012"
+            year: "2013",
+            class: "classd",
+            name: "2013",
+            id: "4"
         }, {
-            year: "2012"
+            year: "2012",
+            class: "classe",
+            name: "2012",
+            id: "5"
         }, {
-            year: "2012"
+            year: "2011",
+            class: "classf",
+            name: "2011",
+            id: "6"
         }, {
-            year: "2012"
+            year: "2000",
+            class: "classg",
+            name: "2000",
+            id: "7"
         }, {
-            year: "2012"
+            year: "2009",
+            class: "classh",
+            name: "2009",
+            id: "8"
         }, {
-            year: "2012"
+            year: "2008",
+            class: "classi",
+            name: "2008",
+            id: "9"
         }, {
-            year: "2012"
+            year: "2007",
+            class: "classj",
+            name: "2007",
+            id: "10"
         }, {
-            year: "2012"
-        }, {
-            year: "2012"
-        }, {
-            year: "2012"
-        }, {
-            year: "2012"
-        }, {
-            year: "2012"
+            year: "2006",
+            class: "classk",
+            name: "2007",
+            id: "11"
         }];
 
         $scope.img = [
@@ -167,7 +353,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Rivets");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
 
@@ -235,7 +421,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Profile");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
 
     })
@@ -318,7 +504,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
 
     })
@@ -327,7 +513,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Platinum Labware");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
 
     })
@@ -393,7 +579,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Semi-Finished");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
@@ -428,6 +614,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("R&D");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
 
         $scope.slider = [
             'img/1.jpg',
@@ -544,7 +731,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Electrical Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-                TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
         $scope.get = [{
             name: "EUROPE",
@@ -630,6 +817,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Services");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
 
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
@@ -650,6 +838,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.classv = "active-tab";
             }
         };
+        $scope.get = [{
+            name: "EUROPE",
+            email: "contacteu@hp.co.in"
+        }, {
+            name: "REST OF THE WORLD",
+            email: "contacteu@hp.co.in"
+        }];
+        $scope.download = [{
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }];
 
     })
 
