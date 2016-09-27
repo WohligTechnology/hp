@@ -576,7 +576,7 @@ a {
         tr {
             &:last-child {
                 border-bottom: 0 solid #ddd !important;
-      
+
             }
         }
     }
@@ -627,6 +627,9 @@ a {
 }
 .br-all {
     border: 1px solid #000;
+}
+.min-h400{
+  min-height: 400px;
 }
 //bootstrap forms
 /* Start writing sass here */
