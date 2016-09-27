@@ -1,17 +1,35 @@
-<section>
-    <div class="hp-top-banner">
-        <img src="img/hp-electro.jpg" alt="Hindustan Platinum" class="img-responsive">
+<section class="bg-grediant">
+    <div class="container">
+        <div class="hp-top-banner">
+            <img src="img/hp-electro.jpg" alt="Hindustan Platinum" class="img-responsive">
+        </div>
     </div>
 </section>
-<section>
+<section class="pb60">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="hp-tab-btn">
+                <div class="hp-pr-decs pd45">
+                    <p>
+                        Considering the chemical stability and resistance to oxidation and corrosion, crucibles and dishes of Platinum and Platinum alloys are mainly used as equipment in Research and Development.
+                    </p>
+                    <p>
+                        The tables on the following pages show the standard forms of crucibles and dishes. Apart from standard forms, we also deliver crucibles and dishes in different thicknesses with reinforced rim, and in case of dishes with or without pouring lip.
+                    </p>
+                    <p>
+                        Crucibles and dishes of other sizes and shapes such as cylindrical, conical etc. with different types of lids are offered against individual specifications in pure Platinum, Platinum/Rhodium or Platinum/Gold..
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hp-tab-btn text-center">
                     <div class="btn-group">
-                        <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}}">Fischer Electrodes</button>
-                        <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}}">Platinum electrodes</button>
-                        <button type="button" name="button" ng-click="tabchanges('cz',3)" class="{{classq}}">CATHODES </button>
+                        <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}} btn-blue font-bold text-up">Fischer Electrodes</button>
+                        <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}} btn-blue font-bold text-up">Platinum electrodes</button>
+                        <button type="button" name="button" ng-click="tabchanges('cz',3)" class="{{classq}} btn-blue font-bold text-up">CATHODES </button>
                     </div>
                 </div>
             </div>
@@ -26,21 +44,31 @@
                             as shown with or without rings. The helical anode made from round wire is used when no anodic deposition or less than 0.2% lead as lead peroxide is required.
                         </p>
                     </div>
-                    <div class="hp-min-tbl">
-                        <table class="table">
+                    <div class="hp-tbl-en b-all mt60">
+                        <table class="table margin0">
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Height overall mm
+                                    <th>Height
+                                        <br>overall
+                                        <br> mm
                                     </th>
-                                    <th>Height of Cylinder mm
+                                    <th>Height of
+                                        <br> Cylinder
+                                        <br> mm
                                     </th>
-                                    <th>Diameter of Cylinder mm
+                                    <th>Diameter of
+                                        <br> Cylinder
+                                        <br> mm
                                     </th>
-                                    <th>Approximate Weights gms
+                                    <th>Approximate
+                                        <br> Weights
+                                        <br> gms
                                     </th>
                                     <th>
-                                        Approximate surface area cm2
+                                        Approximate
+                                        <br> surface area
+                                        <br> cm2
                                     </th>
                                 </tr>
                             </thead>
@@ -56,16 +84,22 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="row">
-                      <div class="col-md-4" ng-repeat="s in shape track by $index">
-                        <div class="hp-el-box">
-                          <img src="{{s}}" alt="Hindustan Platinum" class="img-responsive">
+                    <div class="row mt60">
+                        <div class="col-md-4" ng-repeat="s in shape track by $index">
+                            <div class="hp-el-box">
+                                <img src="{{s}}" alt="Hindustan Platinum" class="img-responsive">
+                            </div>
                         </div>
-                      </div>
-                      <span>Other sizes available on request.</span>
+
                     </div>
                 </div>
+
             </div>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10 ">
+                <span class="font-bold hp-span">Other sizes available on request.</span>
+            </div>
+          </div>
         </div>
         <div class="az" ng-if="tabs=='bz'">
             <div class="row">
