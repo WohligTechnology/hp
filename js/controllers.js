@@ -392,6 +392,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Semi-Finished");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
