@@ -760,6 +760,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             isFirstDisabled: false
         };
 
+        $scope.data=[
+          {
+            img:"img/t1.jpg"
+          },{
+            img:"img/t2.jpg"
+          },{
+            img:"img/t3.jpg"
+          }
+        ];
+
     })
     .controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrical-home");
