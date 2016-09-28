@@ -742,6 +742,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Metal-Compound");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+
+    })
+    .controller('TechnologyDevisionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("technology-devision");
+        $scope.menutitle = NavigationService.makeactive("Technology-Devision");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
 
     })
     .controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
