@@ -104,6 +104,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Metal Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+              TemplateService.header = "views/header2.html";
 
     })
     .controller('GetAnswerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
