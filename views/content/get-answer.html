@@ -1,19 +1,21 @@
-<section>
-    <div class="hp-top-banner">
-        <img src="img/hp-get.jpg" alt="Hindustan Platinum" class="img-responsive">
+<section class="bg-grediant">
+    <div class="container">
+        <div class="hp-top-banner">
+            <img src="img/hp-get.jpg" alt="Hindustan Platinum" class="img-responsive">
+        </div>
     </div>
 </section>
-<section>
+<section class="pb60">
     <div class="container">
-        <div class="row">
+        <div class="row pd45">
             <div class="hp-titile-form">
-                <h4>FOLLOW THESE 3 SIMPLE STEPS TO GET A SOLUTION</h4>
+                <h3 class="text-center">FOLLOW THESE 3 SIMPLE STEPS TO GET A SOLUTION</h3>
             </div>
-            <div class="col-md-4" ng-repeat="item in dn track by $index">
-                <div class="hp-d-box">
+            <div class="col-md-4 mt20" ng-repeat="item in dn track by $index">
+                <div class="hp-d-box text-center">
                     <img ng-src="{{item.img}}" alt="">
                     <div class="hp-from-fn">
-                        <h4>{{item.name}}</h4>
+                        <h4 class="text-up">{{item.name}}</h4>
                     </div>
                     <span>{{item.no}}</span>
                 </div>
@@ -21,23 +23,21 @@
 
         </div>
         <div class="row">
-            <div class="hp-step">
-                <h4>step1: <span>To download the form</span></h4>
+            <div class="hp-step display-inline mt20 ">
+                <h4 class="text-up">STEP 1: <span>To download the form</span></h4>
             </div>
-            <div class="hp-dn-btn">
-                <button type="button" name="button">CLICK HERE</button>
+            <div class="hp-dn-btn display-inline ml15">
+                <button type="button" name="button" class="btn-blue color-primary text-up font-bold btn-padding">CLICK HERE</button>
             </div>
-            <div class="hp-step">
-                <h4>step2: <span>Once you are done filling the form, please enter your details below</span></h4>
+            <div class="hp-step mt20">
+                <h4>STEP 2: <span>Once you are done filling the form, please enter your details below</span></h4>
             </div>
-
-
 
         </div>
-        <form action="" name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted">
+        <form action="" name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted" class="get-form">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="form-group" ng-class="{'form-invalid': formName.name.$invalid && formName.name.$touched}">
+                    <div class="form-group " ng-class="{'form-invalid': formName.name.$invalid && formName.name.$touched}">
                         <input type="text" name="name" class="form-control" ng-model="formData.name" required placeholder="First Name">
                     </div>
                 </div>
@@ -59,28 +59,28 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group" ng-class="{'form-invalid': formName.name.$invalid && formName.name.$touched}">
-                          <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" rows="3"></textarea>
                     </div>
                 </div>
             </div>
+        </form>
+        <div class="row mt20">
+            <div class="col-md-12">
+                <div class="hp-step">
+                    <h4>STEP 3: <span>Upload the form</span></h4>
+                </div>
+                <form class="form-inline">
+
+
+                    <div class="form-group hp-br">
+                      <!-- <button type="submit" class="btn-blue color-primary text-up font-bold btn-padding">Browse</button> -->
+                        <input type="file" id="exampleInputFile">
+                        <!-- <p class="help-block">Example block-level help text here.</p> -->
+                    </div>
+                    <button type="submit" class="btn-blue color-primary text-up font-bold btn-padding">SEND</button>
                 </form>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="hp-step">
-          <h4>step2: <span>Once you are done filling the form, please enter your details below</span></h4>
-      </div>
-      <form class="form-inline">
 
-        <div class="form-group">
-          <div class="form-group">
-        
-           <input type="file" id="exampleInputFile">
-           <p class="help-block">Example block-level help text here.</p>
-         </div>
-        <button type="submit" class="btn btn-default">SEND</button>
-      </form>
-    </div>
-  </div>
+            </div>
 
-    </div>
+        </div>
 </section>

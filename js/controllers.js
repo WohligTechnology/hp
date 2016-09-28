@@ -112,6 +112,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("get-answer");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
 
         $scope.dn = [{
             name: "Download Form ",

@@ -843,6 +843,46 @@ display: block;
 .pt15-per{
       padding-top: 15%;
 }
+.hp-d-box{
+    border: 1px solid #ddd;
+    padding: 20px 0px;
+    position: relative;
+    span{
+      display: block;
+  background: #7f7f7f;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 26px;
+  height: 45px;
+  width: 45px;
+  line-height: 184%;
+  // transform: translateX(-50%);
+      @include transform(translatex(-50%));
+    }
+}
+.ml15{
+      margin-left: 15px;
+}
+.get-form{
+  .form-control{
+    border: 1px solid #0e8be1;
+  }
+  input{
+
+    @include placeholder{
+      color:black;
+    }
+
+  }
+}
+.hp-br{
+  input{
+      filter: alpha(opacity=0);
+  }
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
