@@ -43,6 +43,24 @@
 }
 }
 @media (max-width:480px){
+  .hp-overlayer-name h3 {
+    font-size: 25px;
+
+}
+.hp-overlayer-bg h3 {
+    font-size: 25px;
+
+}
+
+  h1{
+    font-size: 26px;
+  }
+  .hp-data-pad {
+    padding: 10px 0;
+}
+  .hp-mid-banner {
+    margin: 30px 0;
+}
   .hp-pr-decs p {
     font-size: 13px;
 }
@@ -74,7 +92,7 @@
     min-height: 60px;
     padding: 15px 0px 0px 0px;
 }
-.hp-logo2, hp-logo{
+.hp-logo2, .hp-logo{
   img {
      width: 160px;
      vertical-align: text-top;
