@@ -163,7 +163,7 @@ a {
 .text-cap {
     text-transform: capitalize;
 }
-.margin-auto {  
+.margin-auto {
     margin: 0 auto;
 }
 .main-head-top {
@@ -277,6 +277,7 @@ a {
 }
 .hp-banner {
     .flexslider {
+      overflow: hidden;
         margin: 0;
         border: 0 solid #fff;
         .flex-direction-nav {
@@ -286,8 +287,12 @@ a {
             bottom: 22px;
             z-index: 99;
         }
+        .slides img {
+            width: auto;
+        }
     }
 }
+
 .hp-h-footer {
     background-color: #0e8be1;
 }
