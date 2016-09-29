@@ -1,0 +1,90 @@
+@media (max-width:1200px){}
+@media (max-width: $screen-sm-max){
+  .menus .navbar-nav li a {
+    color: #383838;
+    padding: 10px 10px;
+}
+  .menu .navbar-nav li a {
+    color: #383838;
+    padding: 10px 10px;
+}
+}
+@media (max-width: $screen-xs-max){
+  .main-head-top2 .navbar {
+    min-height: 60px;
+    padding: 15px 0px 0px 0px;
+}
+  .main-head-top .navbar {
+    min-height: 60px;
+    padding: 15px 0px 0px 0px;
+}
+.hp-logo2, hp-logo{
+  img {
+     width: 160px;
+     vertical-align: text-top;
+     margin-top: 4px;
+ }
+}
+.menus{
+  padding: 10px 0px;
+  .navbar-nav {
+     float: none !important;
+     margin: 0;
+     text-align: center;
+ }
+}
+.menu{
+    padding: 10px 0px;
+  .navbar-nav {
+     float: none !important;
+     margin: 0;
+     text-align: center;
+ }
+}
+}
+@media (max-width:480px){
+  .m30-min{
+        margin: 30px 0px;
+  }
+  .br-right {
+    border-right: 0px solid #0d9dff;
+    min-height: 100px;
+}
+  .fl-none{
+    float: none !important;
+  }
+  .text-c-m{
+    text-align: center;
+  }
+  .main-head-top2 .navbar {
+    min-height: 60px;
+    padding: 15px 0px 0px 0px;
+}
+  .main-head-top .navbar {
+    min-height: 60px;
+    padding: 15px 0px 0px 0px;
+}
+.hp-logo2, hp-logo{
+  img {
+     width: 160px;
+     vertical-align: text-top;
+     margin-top: 4px;
+ }
+}
+.menus{
+  padding: 10px 0px;
+  .navbar-nav {
+     float: none !important;
+     margin: 0;
+     text-align: center;
+ }
+}
+.menu{
+    padding: 10px 0px;
+  .navbar-nav {
+     float: none !important;
+     margin: 0;
+     text-align: center;
+ }
+}
+}

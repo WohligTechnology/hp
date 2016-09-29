@@ -166,7 +166,7 @@ a {
 .margin-auto {
     margin: 0 auto;
 }
-.main-head-top {
+.main-head-top { 
     .navbar-default {
         background-color: rgba(248, 248, 248, 0);
         border-color: rgba(231, 231, 231, 0);
@@ -185,7 +185,7 @@ a {
         min-height: 80px;
         margin-bottom: 0;
         padding: 15px;
-        -webkit-box-shadow: -3px 26px 23px -26px #545454;
+          box-shadow: 0px 13px 22px -10px #b0b0b0;
     }
 }
 .hp-mid-banner {
@@ -237,7 +237,7 @@ a {
     margin-top: 22px;
 }
 .head-menu2 {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .menu {
     .navbar-nav {
@@ -908,3 +908,4 @@ a {
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
+@import "mobile";
