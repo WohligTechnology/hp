@@ -19,16 +19,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.product = [{
             name: "ENGINEERED PRODUCTS ",
-            img: "img/1.jpg"
+            img: "img/1.jpg",
+            link:"engineering-home"
         }, {
             name: "ELECTRICAL CONTACTS ",
-            img: "img/2.jpg"
+            img: "img/2.jpg",
+            link:"electrical-home"
         }, {
             name: "SALTS AND CATALYSTS ",
-            img: "img/3.jpg"
+            img: "img/3.jpg",
+            link:"salt-catalysts"
         }, {
             name: "SERVICES ",
-            img: "img/4.jpg"
+            img: "img/4.jpg",
+            link:"services"
         }, {
             name: "Precious Metal management ",
             img: "img/4a.jpg"
