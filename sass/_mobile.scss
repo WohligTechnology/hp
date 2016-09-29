@@ -5,8 +5,16 @@
     padding: 10px 10px;
 }
   .menu .navbar-nav li a {
-    color: #383838;
+    color: #fff;
     padding: 10px 10px;
+}
+.hp-overlayer-name h3 {
+  font-size: 25px;
+
+}
+.hp-overlayer-bg h3 {
+  font-size: 25px;
+
 }
 }
 @media (max-width: $screen-xs-max){
@@ -43,6 +51,10 @@
 }
 }
 @media (max-width:480px){
+  .head-menu {
+    margin-top: 22px;
+    background-color: #fff;
+}
   .hp-overlayer-name h3 {
     font-size: 25px;
 
