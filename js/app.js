@@ -118,6 +118,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'AssemblyCtrl'
   })
+    .state('spinnerettes', {
+    url: "/spinnerettes",
+    templateUrl: "views/template.html",
+    controller: 'SpinnerettesCtrl'
+  })
     .state('engineering-home', {
     url: "/engineering-home",
     templateUrl: "views/template.html",

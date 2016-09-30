@@ -678,6 +678,26 @@ a {
         }
     }
 }
+.hp-cs-tbl{
+  @extend .hp-dimesion-tbl;
+  thead{
+    tr{
+      th{
+        font-size: 14px !important;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+          font-size: 14px !important;
+          &:first-child{
+            font-weight: bold;
+          }
+      }
+    }
+  }
+}
 .min-w70 {
     tr {
         td {
@@ -918,6 +938,45 @@ a {
   padding-top: 14px;
 display: block;
 font-size: 16px;
+}
+.blu-tbl{
+  table{
+    border: 1px solid $brand-primary;
+    tbody{
+      tr{
+        td{
+          border-top: 1px solid $brand-primary;
+          &:first-child{
+            border-right: 1px solid $brand-primary;
+          }
+        }
+      }
+    }
+
+  }
+}
+.border-none{
+  border-bottom: none !important;
+}
+.hp-mn{
+        border: 1px solid $brand-primary;
+  .table{
+
+      .main-t{
+        tr{
+          td{
+              border-top: 1px solid $brand-primary;
+                border-right: 1px solid #0e8be1 !important;
+          }
+        }
+      }
+  }
+}
+.min-tr{
+  th{
+        border-top: 1px solid #0e8be1 !important;
+        border-right: 1px solid #0e8be1 !important;
+  }
 }
 //bootstrap forms
 /* Start writing sass here */

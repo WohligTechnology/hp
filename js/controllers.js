@@ -45,6 +45,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('SpinnerettesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("spinnerettes");
+        $scope.menutitle = NavigationService.makeactive("Spinnerettes");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+        $scope.tabs = 'az';
+        $scope.classp = 'active-tab';
+        $scope.classv = '';
+
+
+        $scope.tabchanges = function(tabs, a) {
+
+            $scope.tabs = tabs;
+            if (a == 1) {
+
+                $scope.classp = "active-tab";
+                $scope.classv = '';
+
+            } else {
+
+                $scope.classp = '';
+                $scope.classv = "active-tab";
+            }
+        };
+
+    })
     .controller('GlassIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("glass-industry");
         $scope.menutitle = NavigationService.makeactive("Glass Industry");
