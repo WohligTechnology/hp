@@ -45,6 +45,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('GlassIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("glass-industry");
+        $scope.menutitle = NavigationService.makeactive("Glass Industry");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+              TemplateService.header = "views/header2.html";
+
+              $scope.glass=[{
+                img:"img/g1.jpg",
+                name:"V-BOTTOM CRUCIBLES"
+              },{
+                img:"img/g2.jpg",
+                name:"OPEN-ENDED TUBES"
+              },{
+                img:"img/g3.jpg",
+                name:"FLARED TUBES"
+              },{
+                img:"img/g1.jpg",
+                name:"V-BOTTOM CRUCIBLES"
+              }];
+
+    })
     .controller('KnowCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("know-catalyst");
         $scope.menutitle = NavigationService.makeactive("Know Catalyst");

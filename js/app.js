@@ -128,6 +128,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'ProductsCtrl'
   })
+    .state('glass-industry', {
+    url: "/glass-industry",
+    templateUrl: "views/template.html",
+    controller: 'GlassIndustryCtrl'
+  })
     .state('metal-compound', {
     url: "/metal-compound",
     templateUrl: "views/template.html",
