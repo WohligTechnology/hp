@@ -282,6 +282,9 @@ a {
         border: 0 solid #fff;
         .flex-direction-nav {
             display: none;
+            a{
+                  transform: translateY(-50%);
+            }
         }
         .flex-control-nav {
             bottom: 22px;
@@ -702,6 +705,7 @@ a {
         width: 45px;
         height: 80px;
         opacity: 1;
+            transform: translateY(-50%);
     }
     .flex-direction-nav .flex-prev {
         left: -40px;
@@ -909,6 +913,11 @@ a {
             font-weight: 500;
         }
     }
+}
+.sp-pd{
+  padding-top: 14px;
+display: block;
+font-size: 16px;
 }
 //bootstrap forms
 /* Start writing sass here */
