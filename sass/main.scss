@@ -978,6 +978,15 @@ font-size: 16px;
         border-right: 1px solid #0e8be1 !important;
   }
 }
+.hp-tb{
+  table{
+    tr{
+      th,td{
+        text-align: center;
+      }
+    }
+  }
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";

@@ -45,6 +45,64 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('JewelleryIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("jewellery-industry");
+        $scope.menutitle = NavigationService.makeactive("Jewellery Industry");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+            TemplateService.header = "views/header2.html";
+
+                          $scope.glass=[{
+                            img:"img/g1.jpg",
+                            name:"V-BOTTOM CRUCIBLES"
+                          },{
+                            img:"img/g2.jpg",
+                            name:"OPEN-ENDED TUBES"
+                          },{
+                            img:"img/g3.jpg",
+                            name:"FLARED TUBES"
+                          },{
+                            img:"img/g1.jpg",
+                            name:"V-BOTTOM CRUCIBLES"
+                          }];
+
+    })
+    .controller('NobleMetalCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("noble-metal");
+        $scope.menutitle = NavigationService.makeactive("Noble Metal");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
+
+          $scope.tabs = 'az';
+          $scope.classp = 'active-tab';
+          $scope.classv = '';
+          $scope.classq = '';
+
+
+          $scope.tabchanges = function(tabs, a) {
+
+              $scope.tabs = tabs;
+              if (a == 1) {
+
+                  $scope.classp = "active-tab";
+                  $scope.classv = '';
+                  $scope.classq = '';
+
+              } else if (a == 2) {
+
+                  $scope.classp = '';
+                  $scope.classq = '';
+                  $scope.classv = "active-tab";
+              } else {
+
+                  $scope.classp = '';
+                  $scope.classv = '';
+                  $scope.classq = "active-tab";
+              }
+          };
+
+    })
     .controller('SpinnerettesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("spinnerettes");
         $scope.menutitle = NavigationService.makeactive("Spinnerettes");

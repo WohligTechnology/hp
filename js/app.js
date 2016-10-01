@@ -23,10 +23,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'AboutUsCtrl'
   })
+    .state('noble-metal', {
+    url: "/noble-metal",
+    templateUrl: "views/template.html",
+    controller: 'NobleMetalCtrl'
+  })
     .state('careers', {
     url: "/careers",
     templateUrl: "views/template.html",
     controller: 'CareersCtrl'
+  })
+    .state('jewellery-industry', {
+    url: "/jewellery-industry",
+    templateUrl: "views/template.html",
+    controller: 'JewelleryIndustryCtrl'
   })
     .state('electrodes', {
     url: "/electrodes",
