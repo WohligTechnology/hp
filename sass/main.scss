@@ -1150,6 +1150,32 @@ a {
     }
 }
 
+.metal {
+    thead,
+    tbody,
+    tr,
+    td,
+    th {
+        border: 1px solid #0e8be1;
+    }
+    // text-align: center;
+    text-transform: uppercase;
+    .head {
+        background: #0e8be1;
+        color: #ffffff;
+        // text-align: center;
+    }
+}
+
+.caret-ico {
+    .down {
+        color: #ff0000;
+    }
+    .up {
+        color: #00ff00;
+    }
+}
+
 //bootstrap forms
 
 /* Start writing sass here */
