@@ -45,6 +45,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('BrochureCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("brochure");
+        $scope.menutitle = NavigationService.makeactive("Brochure");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
+
+          $scope.brochure=[
+            "img/b1.jpg",
+            "img/b2.jpg",
+            "img/b3.jpg",
+            "img/b4.jpg",
+            "img/b1.jpg",
+            "img/b2.jpg",
+            "img/b3.jpg"
+          ]
+
+    })
     .controller('JewelleryIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("jewellery-industry");
         $scope.menutitle = NavigationService.makeactive("Jewellery Industry");

@@ -185,7 +185,7 @@ a {
         min-height: 80px;
         margin-bottom: 0;
         padding: 15px;
-          box-shadow: 0px 13px 22px -10px #b0b0b0;
+        box-shadow: 0 13px 22px -10px #b0b0b0;
     }
 }
 .hp-mid-banner {
@@ -277,13 +277,13 @@ a {
 }
 .hp-banner {
     .flexslider {
-      overflow: hidden;
+        overflow: hidden;
         margin: 0;
         border: 0 solid #fff;
         .flex-direction-nav {
             display: none;
-            a{
-                  transform: translateY(-50%);
+            a {
+                transform: translateY(-50%);
             }
         }
         .flex-control-nav {
@@ -295,7 +295,6 @@ a {
         }
     }
 }
-
 .hp-h-footer {
     background-color: #0e8be1;
 }
@@ -678,25 +677,25 @@ a {
         }
     }
 }
-.hp-cs-tbl{
-  @extend .hp-dimesion-tbl;
-  thead{
-    tr{
-      th{
-        font-size: 14px !important;
-      }
+.hp-cs-tbl {
+    @extend .hp-dimesion-tbl;
+    thead {
+        tr {
+            th {
+                font-size: 14px !important;
+            }
+        }
     }
-  }
-  tbody{
-    tr{
-      td{
-          font-size: 14px !important;
-          &:first-child{
-            font-weight: bold;
-          }
-      }
+    tbody {
+        tr {
+            td {
+                font-size: 14px !important;
+                &:first-child {
+                    font-weight: bold;
+                }
+            }
+        }
     }
-  }
 }
 .min-w70 {
     tr {
@@ -725,7 +724,7 @@ a {
         width: 45px;
         height: 80px;
         opacity: 1;
-            transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     .flex-direction-nav .flex-prev {
         left: -40px;
@@ -934,59 +933,75 @@ a {
         }
     }
 }
-.sp-pd{
-  padding-top: 14px;
-display: block;
-font-size: 16px;
+.sp-pd {
+    padding-top: 14px;
+    display: block;
+    font-size: 16px;
 }
-.blu-tbl{
-  table{
-    border: 1px solid $brand-primary;
-    tbody{
-      tr{
-        td{
-          border-top: 1px solid $brand-primary;
-          &:first-child{
-            border-right: 1px solid $brand-primary;
-          }
-        }
-      }
-    }
-
-  }
-}
-.border-none{
-  border-bottom: none !important;
-}
-.hp-mn{
+.blu-tbl {
+    table {
         border: 1px solid $brand-primary;
-  .table{
-
-      .main-t{
-        tr{
-          td{
-              border-top: 1px solid $brand-primary;
-                border-right: 1px solid #0e8be1 !important;
-          }
+        tbody {
+            tr {
+                td {
+                    border-top: 1px solid $brand-primary;
+                    &:first-child {
+                        border-right: 1px solid $brand-primary;
+                    }
+                }
+            }
         }
-      }
-  }
+    }
 }
-.min-tr{
-  th{
+.border-none {
+    border-bottom: none !important;
+}
+.hp-mn {
+    border: 1px solid $brand-primary;
+    .table {
+        .main-t {
+            tr {
+                td {
+                    border-top: 1px solid $brand-primary;
+                    border-right: 1px solid #0e8be1 !important;
+                }
+            }
+        }
+    }
+}
+.min-tr {
+    th {
         border-top: 1px solid #0e8be1 !important;
         border-right: 1px solid #0e8be1 !important;
-  }
-}
-.hp-tb{
-  table{
-    tr{
-      th,td{
-        text-align: center;
-      }
     }
+}
+.hp-tb {
+    table {
+        tr {
+            td,
+            th {
+                text-align: center;
+            }
+        }
+    }
+}
+.hp-br {
+&:hover{
+  .over-dn {
+      display: block;
+      @include transition(all 300ms ease);
   }
 }
+    .over-dn {
+        top: 0;
+        background: rgba(0, 0, 0, 0.52);
+        height: 100%;
+        width: 100%;
+      display: none;
+        @include transition(all 300ms ease);
+    }
+}
+
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
