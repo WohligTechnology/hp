@@ -568,6 +568,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
 
 
     })
@@ -727,6 +734,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
+
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
+
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
