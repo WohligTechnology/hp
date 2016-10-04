@@ -7,7 +7,9 @@
 @import "../bower_components/swiper/dist/css/swiper.min.css";
 @import "../bower_components/smart-app-banner/smart-app-banner.css";
 @import "../bower_components/angular-ui-select/dist/select";
+
 /* Bootstrap Variables Goes Here */
+
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
@@ -15,63 +17,85 @@ $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 $brand-base: #383838 !default;
 $white: #fff !default;
-$font-family-sans-serif: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Proxima Nova", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Proxima Nova",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-family-serif: "Proxima Nova",
+Georgia,
+"Times New Roman",
+Times,
+serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
     // padding-top: 70px;
 }
+
 @font-face {
     font-family: "Proxima Nova";
     src: url("../fonts/ProximaNova-Light.otd");
     font-weight: 300;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Proxima Nova";
     src: url("../fonts/ProximaNova-Regular.otf");
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Proxima Nova";
     src: url("../fonts/ProximaNova-Bold.otf");
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Proxima Nova";
     src: url("../fonts/ProximaNova-Semibold.otf");
     font-weight: 500;
     font-style: normal;
 }
+
 img.loading {
     text-align: center;
     opacity: 1;
     width: 32px !important;
     height: auto;
 }
+
 img {
     opacity: 0;
     @include transition(all 300ms ease);
 }
+
 img.doneLoading {
     opacity: 1;
 }
+
 nav li:hover .dropdown-menu {
     display: block;
 }
+
 #map img {
     opacity: 1;
 }
+
 img {
     opacity: 0;
     @include transition(all 300ms ease);
 }
+
 img.doneLoading {
     opacity: 1;
 }
+
+
 /* mixing*/
+
 @mixin placeholder {
     $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
     @each $placeholder in $placeholders {
@@ -80,65 +104,79 @@ img.doneLoading {
         }
     }
 }
+
 @mixin transition($transition...) {
     -moz-transition: $transition;
     -o-transition: $transition;
     -webkit-transition: $transition;
     transition: $transition;
 }
+
 @mixin x-appearance ($value) {
     -webkit-appearance: $value;
     -moz-appearance: $value;
     appearance: $value;
 }
+
 .btn,
 [ui-sref],
 a {
     cursor: pointer;
     @include transition(all ease 300ms);
 }
+
 //bootstrap forms
 .btn,
 .form-control,
-.input-group-lg > .form-control,
-.input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
 .input-lg {
     border-radius: 0;
     @include box-shadow(none);
 }
+
 .row-flex {
     @include display(flex);
 }
+
 .col-33 {
     width: 33.33%;
     float: left;
 }
+
 .col-flex {
     @include flex(1);
     // flex: 0 0 20%;
     // max-width: 20%;
 }
+
 .form-control:focus {
     border-color: $brand-primary;
     outline: 0;
     @include box-shadow(none);
 }
+
 .color-primary {
     color: $brand-primary;
 }
+
 .color-base {
     color: $brand-base;
 }
+
 .color-white {
     color: $white;
 }
+
 .margin0 {
     margin: 0;
 }
+
 .padding0 {
     padding: 0;
 }
+
 .hp-list {
     ul {
         list-style: none;
@@ -148,24 +186,31 @@ a {
         }
     }
 }
+
 .display-inline {
     display: inline-block;
 }
+
 .hp-relative {
     position: relative;
 }
+
 .hp-absulate {
     position: absolute;
 }
+
 .text-up {
     text-transform: uppercase;
 }
+
 .text-cap {
     text-transform: capitalize;
 }
+
 .margin-auto {
     margin: 0 auto;
 }
+
 .main-head-top {
     .navbar-default {
         background-color: rgba(248, 248, 248, 0);
@@ -176,6 +221,7 @@ a {
         padding: 15px 15px 0;
     }
 }
+
 .main-head-top2 {
     .navbar-default {
         background-color: $white;
@@ -188,33 +234,43 @@ a {
         box-shadow: 0 13px 22px -10px #b0b0b0;
     }
 }
+
 .hp-mid-banner {
     margin: 100px 0;
 }
+
 .width100 {
     width: 100%;
 }
+
 .hp-logo {
     img {
         width: 300px;
     }
 }
+
 .hp-logo2 {
     img {
         width: 240px;
     }
 }
+
 .hp-data-pad {
     padding: 30px 0;
 }
+
 .hp-top-banner {
     // padding-left: 100px;
 }
+
 .pb50 {
     padding-bottom: 50px;
 }
+
 .btn-blue {
-    @include button-variant($brand-primary, transparent, $brand-primary);
+    @include button-variant($brand-primary,
+    transparent,
+    $brand-primary);
     border: 1px solid #0d9dff;
     &:hover {
         outline: 0;
@@ -230,15 +286,19 @@ a {
         }
     }
 }
+
 .btn-padding {
     padding: 8px 10px 5px;
 }
+
 .head-menu {
     margin-top: 22px;
 }
+
 .head-menu2 {
     margin-top: 8px;
 }
+
 .menu {
     .navbar-nav {
         float: right;
@@ -257,6 +317,7 @@ a {
         }
     }
 }
+
 .menus {
     .navbar-nav {
         float: right !important;
@@ -275,6 +336,7 @@ a {
         }
     }
 }
+
 .hp-banner {
     .flexslider {
         overflow: hidden;
@@ -295,9 +357,11 @@ a {
         }
     }
 }
+
 .hp-h-footer {
     background-color: #0e8be1;
 }
+
 .hp-up-footer {
     span {
         color: $white;
@@ -322,15 +386,19 @@ a {
         }
     }
 }
+
 .font-bold {
     font-weight: 700;
 }
+
 .font-light {
     font-weight: 300;
 }
+
 .font-semi {
     font-weight: 500;
 }
+
 .hp-ft-lists {
     a {
         font-weight: 500;
@@ -342,17 +410,21 @@ a {
         }
     }
 }
+
 .br-right {
     border-right: 1px solid $brand-primary;
     min-height: 200px;
 }
+
 .hp-up-footer {
     padding: 45px 0 15px;
 }
+
 .hp-l-footer {
     padding: 15px 0 5px;
     background-color: $brand-primary;
 }
+
 .hp-overlayer-name {
     background-color: rgba(0, 0, 0, 0.46);
     height: 100%;
@@ -365,6 +437,7 @@ a {
         padding-top: 24px;
     }
 }
+
 .hp-img-box {
     cursor: pointer;
     &:hover {
@@ -374,6 +447,7 @@ a {
         }
     }
 }
+
 .hp-overlayer-bg {
     opacity: 0;
     @include transition(all 300ms ease);
@@ -387,27 +461,37 @@ a {
         padding-top: 24px;
     }
 }
+
 .hp-mid {
     top: 50%;
     left: 50%;
-    @include transform(translate(-50%,-50%));
+    @include transform(translate(-50%,
+    -50%));
 }
+
 .hp-mg-min {
     margin-top: -115px;
     z-index: 999;
     position: relative;
 }
+
 .bg-grediant {
     // background: linear-gradient(to right, #ffffff 20%,#0e8ae0 0%,#0e8ae0 100%);
-    @include background(linear-gradient(to right, #ffffff 22%,#0e8ae0 0%,#0e8ae0 100%));
+    @include background(linear-gradient(to right,
+    #ffffff 22%,
+    #0e8ae0 0%,
+    #0e8ae0 100%));
     margin-top: 135px;
 }
+
 .pd45 {
     padding: 45px 0;
 }
+
 .hp-cl-title {
     padding: 30px 0;
 }
+
 .hp-pr-decs {
     p {
         color: $brand-base;
@@ -416,10 +500,20 @@ a {
         font-size: 15px;
     }
 }
+
 .hp-get-sec {
     background: url(../img/hp-sli-bg.jpg)no-repeat;
     background-size: cover;
+    // &:hover {
+    //     opacity: 0;
+    //     transition: all 300ms ease;
+    //     top: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background: rgba(0, 0, 0, 0.63);
+    // }
 }
+
 .hp-gt {
     .flexslider {
         margin: 0;
@@ -427,6 +521,7 @@ a {
         border: 0 solid #fff;
     }
 }
+
 .if-no-slider {
     ul {
         li {
@@ -434,6 +529,7 @@ a {
         }
     }
 }
+
 .hp-cn {
     h3 {
         margin-bottom: 5px;
@@ -441,8 +537,10 @@ a {
     p {
         margin: 0;
         line-height: 125%;
+        font-size: 18px;
     }
 }
+
 .hp-dn-icon {
     display: initial;
     img {
@@ -450,24 +548,29 @@ a {
         vertical-align: bottom;
     }
 }
+
 .p20 {
     padding: 20px 0;
 }
+
 .hp-dn-txt {
     background: $brand-primary;
     padding: 7px 3px;
     border-radius: 8px;
     width: 60%;
 }
+
 .pt20 {
     padding-top: 20px;
 }
+
 .hp-eng-box {
     position: relative;
     height: 330px;
     overflow: hidden;
     display: block;
 }
+
 .overl-lay-blue {
     background-color: rgba(14, 139, 225, 0.77);
     height: 100%;
@@ -475,14 +578,17 @@ a {
     position: absolute;
     top: 0;
 }
+
 .pad-cl {
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 16px;
 }
+
 .pad60 {
     padding: 60px 0;
 }
+
 .hp-acc {
     .panel {
         border: 0 solid transparent;
@@ -519,6 +625,7 @@ a {
         }
     }
 }
+
 .hp-tab-btn {
     button {
         padding: 10px 20px 5px;
@@ -526,13 +633,16 @@ a {
         margin: 0 5px;
     }
 }
+
 .active-tab {
     background-color: $brand-primary !important;
     color: $white !important;
 }
+
 .hp-tab-btn {
     padding: 20px 0 30px;
 }
+
 .hp-tbl-en {
     .table {
         tbody,
@@ -553,6 +663,7 @@ a {
         }
     }
 }
+
 .hp-table-dif {
     @extend .hp-tbl-en;
     td,
@@ -587,36 +698,45 @@ a {
         }
     }
 }
+
 .cs-table {
     padding: 0 !important;
     border-right: 0 !important;
 }
+
 .mt60 {
     margin-top: 60px;
 }
+
 .b-all {
     border-top: 1px solid $brand-primary;
     border-bottom: 1px solid $brand-primary;
     border-left: 1px solid $brand-primary;
 }
+
 .pb60 {
     padding-bottom: 60px;
 }
+
 .mt20 {
     margin-top: 20px;
 }
+
 .hp-span {
     display: block;
     padding-top: 20px;
 }
+
 .wauto {
     td {
         min-width: 113px !important;
     }
 }
+
 .pl12 {
     padding-left: 12px;
 }
+
 .formulae {
     list-style: none;
     padding: 0;
@@ -631,12 +751,15 @@ a {
         width: 70%;
     }
 }
+
 .br-all {
     border: 1px solid #000;
 }
+
 .min-h400 {
     min-height: 400px;
 }
+
 .hp-shape {
     margin: 50px auto;
     text-align: center;
@@ -645,6 +768,7 @@ a {
         margin: 0 auto;
     }
 }
+
 .hp-dimesion-tbl {
     .table {
         text-align: center;
@@ -677,6 +801,7 @@ a {
         }
     }
 }
+
 .hp-cs-tbl {
     @extend .hp-dimesion-tbl;
     thead {
@@ -697,6 +822,7 @@ a {
         }
     }
 }
+
 .min-w70 {
     tr {
         td {
@@ -704,6 +830,7 @@ a {
         }
     }
 }
+
 .hp-rnd-slider {
     .flex-control-nav {
         display: none;
@@ -750,6 +877,7 @@ a {
         outline: 0;
     }
 }
+
 .year-slider {
     li {
         a {
@@ -768,15 +896,18 @@ a {
         }
     }
 }
+
 .mb15 {
     margin-bottom: 30px;
 }
+
 .hp-sl {
     padding-top: 10px;
     h3 {
         font-size: 20px;
     }
 }
+
 .hp-sl-rec {
     .btn {
         padding: 5px 12px;
@@ -852,6 +983,7 @@ a {
         outline: 0;
     }
 }
+
 .hp-mm {
     top: 0;
     right: 0;
@@ -859,6 +991,7 @@ a {
         width: 42px;
     }
 }
+
 .hp-tab-btn {
     .btn-group {
         position: relative;
@@ -868,9 +1001,11 @@ a {
         display: block;
     }
 }
+
 .pt15-per {
     padding-top: 15%;
 }
+
 .hp-d-box {
     border: 1px solid #ddd;
     padding: 20px 0;
@@ -891,9 +1026,11 @@ a {
         @include transform(translatex(-50%));
     }
 }
+
 .ml15 {
     margin-left: 15px;
 }
+
 .get-form {
     .form-control {
         border: 1px solid $brand-primary;
@@ -904,11 +1041,13 @@ a {
         }
     }
 }
+
 .hp-br {
     input {
         filter: alpha(opacity=0);
     }
 }
+
 .hp-cl {
     background-color: red;
     height: 10px;
@@ -917,9 +1056,11 @@ a {
     display: inline-block;
     margin-right: 8px;
 }
+
 .mt50 {
     margin-top: 50px;
 }
+
 .hp-cl-list {
     background: #cfe8f9;
     padding: 18px 0 2px;
@@ -933,11 +1074,13 @@ a {
         }
     }
 }
+
 .sp-pd {
     padding-top: 14px;
     display: block;
     font-size: 16px;
 }
+
 .blu-tbl {
     table {
         border: 1px solid $brand-primary;
@@ -953,9 +1096,11 @@ a {
         }
     }
 }
+
 .border-none {
     border-bottom: none !important;
 }
+
 .hp-mn {
     border: 1px solid $brand-primary;
     .table {
@@ -969,12 +1114,14 @@ a {
         }
     }
 }
+
 .min-tr {
     th {
         border-top: 1px solid #0e8be1 !important;
         border-right: 1px solid #0e8be1 !important;
     }
 }
+
 .hp-tb {
     table {
         tr {
@@ -985,24 +1132,27 @@ a {
         }
     }
 }
+
 .hp-br {
-&:hover{
-  .over-dn {
-      display: block;
-      @include transition(all 300ms ease);
-  }
-}
+    &:hover {
+        .over-dn {
+            display: block;
+            @include transition(all 300ms ease);
+        }
+    }
     .over-dn {
         top: 0;
         background: rgba(0, 0, 0, 0.52);
         height: 100%;
         width: 100%;
-      display: none;
+        display: none;
         @include transition(all 300ms ease);
     }
 }
 
 //bootstrap forms
+
 /* Start writing sass here */
+
 @import "fancybox-override";
 @import "mobile";

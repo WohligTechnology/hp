@@ -1,6 +1,6 @@
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.select','ksSwiper'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.select', 'ksSwiper'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
 
         console.log("Testing Consoles");
@@ -20,39 +20,39 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.product = [{
             name: "ENGINEERED PRODUCTS ",
             img: "img/1.jpg",
-            link:"engineering-home"
+            link: "engineering-home"
         }, {
             name: "ELECTRICAL CONTACTS ",
             img: "img/2.jpg",
-            link:"electrical-home"
+            link: "electrical-home"
         }, {
             name: "SALTS AND CATALYSTS ",
             img: "img/3.jpg",
-            link:"salt-catalysts"
+            link: "salt-catalysts"
         }, {
             name: "SERVICES ",
             img: "img/4.jpg",
-            link:"services"
+            link: "services"
         }, {
             name: "Precious Metal management ",
             img: "img/4a.jpg"
         }];
     })
-    .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('AboutUsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("about-us");
         $scope.menutitle = NavigationService.makeactive("About Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('BrochureCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('BrochureCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("brochure");
         $scope.menutitle = NavigationService.makeactive("Brochure");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
-          $scope.brochure=[
+        $scope.brochure = [
             "img/b1.jpg",
             "img/b2.jpg",
             "img/b3.jpg",
@@ -60,68 +60,68 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "img/b1.jpg",
             "img/b2.jpg",
             "img/b3.jpg"
-          ]
+        ]
 
     })
-    .controller('JewelleryIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('JewelleryIndustryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("jewellery-industry");
         $scope.menutitle = NavigationService.makeactive("Jewellery Industry");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-            TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
-                          $scope.glass=[{
-                            img:"img/g1.jpg",
-                            name:"V-BOTTOM CRUCIBLES"
-                          },{
-                            img:"img/g2.jpg",
-                            name:"OPEN-ENDED TUBES"
-                          },{
-                            img:"img/g3.jpg",
-                            name:"FLARED TUBES"
-                          },{
-                            img:"img/g1.jpg",
-                            name:"V-BOTTOM CRUCIBLES"
-                          }];
+        $scope.glass = [{
+            img: "img/g1.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }, {
+            img: "img/g2.jpg",
+            name: "OPEN-ENDED TUBES"
+        }, {
+            img: "img/g3.jpg",
+            name: "FLARED TUBES"
+        }, {
+            img: "img/g1.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }];
 
     })
-    .controller('NobleMetalCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('NobleMetalCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("noble-metal");
         $scope.menutitle = NavigationService.makeactive("Noble Metal");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
-          $scope.tabs = 'az';
-          $scope.classp = 'active-tab';
-          $scope.classv = '';
-          $scope.classq = '';
+        $scope.tabs = 'az';
+        $scope.classp = 'active-tab';
+        $scope.classv = '';
+        $scope.classq = '';
 
 
-          $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
-              $scope.tabs = tabs;
-              if (a == 1) {
+            $scope.tabs = tabs;
+            if (a == 1) {
 
-                  $scope.classp = "active-tab";
-                  $scope.classv = '';
-                  $scope.classq = '';
+                $scope.classp = "active-tab";
+                $scope.classv = '';
+                $scope.classq = '';
 
-              } else if (a == 2) {
+            } else if (a == 2) {
 
-                  $scope.classp = '';
-                  $scope.classq = '';
-                  $scope.classv = "active-tab";
-              } else {
+                $scope.classp = '';
+                $scope.classq = '';
+                $scope.classv = "active-tab";
+            } else {
 
-                  $scope.classp = '';
-                  $scope.classv = '';
-                  $scope.classq = "active-tab";
-              }
-          };
+                $scope.classp = '';
+                $scope.classv = '';
+                $scope.classq = "active-tab";
+            }
+        };
 
     })
-    .controller('SpinnerettesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SpinnerettesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("spinnerettes");
         $scope.menutitle = NavigationService.makeactive("Spinnerettes");
         TemplateService.title = $scope.menutitle;
@@ -132,7 +132,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -148,34 +148,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('GlassIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('GlassIndustryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("glass-industry");
         $scope.menutitle = NavigationService.makeactive("Glass Industry");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-              TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
-              $scope.glass=[{
-                img:"img/g1.jpg",
-                name:"V-BOTTOM CRUCIBLES"
-              },{
-                img:"img/g2.jpg",
-                name:"OPEN-ENDED TUBES"
-              },{
-                img:"img/g3.jpg",
-                name:"FLARED TUBES"
-              },{
-                img:"img/g1.jpg",
-                name:"V-BOTTOM CRUCIBLES"
-              }];
+        $scope.glass = [{
+            img: "img/g1.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }, {
+            img: "img/g2.jpg",
+            name: "OPEN-ENDED TUBES"
+        }, {
+            img: "img/g3.jpg",
+            name: "FLARED TUBES"
+        }, {
+            img: "img/g1.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }];
 
     })
-    .controller('KnowCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('KnowCatalystCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("know-catalyst");
         $scope.menutitle = NavigationService.makeactive("Know Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-            TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
 
@@ -191,7 +191,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classq = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -228,20 +228,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Aromatic hydrogenation"
         }]
     })
-    .controller('MetalCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MetalCatalystCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-catalyst");
         $scope.menutitle = NavigationService.makeactive("Metal Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-              TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
     })
-    .controller('GetAnswerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('GetAnswerCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("get-answer");
         $scope.menutitle = NavigationService.makeactive("get-answer");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
         $scope.dn = [{
             name: "Download Form ",
@@ -258,7 +258,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('PressCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("press");
         $scope.menutitle = NavigationService.makeactive("Press");
         TemplateService.title = $scope.menutitle;
@@ -278,7 +278,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classj = '';
         $scope.classk = '';
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
             $scope.tabs = tabs;
             if (a == 1) {
                 $scope.classa = "active-tab";
@@ -494,7 +494,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ];
 
     })
-    .controller('RivetsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('RivetsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("rivets");
         $scope.menutitle = NavigationService.makeactive("Rivets");
         TemplateService.title = $scope.menutitle;
@@ -516,7 +516,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -562,7 +562,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             img: "img/5.jpg"
         }];
     })
-    .controller('ProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("profile");
         $scope.menutitle = NavigationService.makeactive("Profile");
         TemplateService.title = $scope.menutitle;
@@ -571,7 +571,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('AssemblyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('AssemblyCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("assembly");
         $scope.menutitle = NavigationService.makeactive("Assembly");
         TemplateService.title = $scope.menutitle;
@@ -580,12 +580,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('SaltCatalystsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SaltCatalystsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("salt-catalysts");
         $scope.menutitle = NavigationService.makeactive("Salt Catalysts");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-              TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
         $scope.get = [{
             name: "EUROPE",
@@ -605,7 +605,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('ElectrodesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ElectrodesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrodes");
         $scope.menutitle = NavigationService.makeactive("Electrodes");
         TemplateService.title = $scope.menutitle;
@@ -618,7 +618,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classq = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -646,7 +646,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             'img/e3.png'
         ];
     })
-    .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('TemperatureSensingCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("temperature-sensing");
         $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
         TemplateService.title = $scope.menutitle;
@@ -655,7 +655,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('PlatinumLabwareCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('PlatinumLabwareCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("platinum-labware");
         $scope.menutitle = NavigationService.makeactive("Platinum Labware");
         TemplateService.title = $scope.menutitle;
@@ -664,7 +664,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('MicroPlatinumCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MicroPlatinumCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("micro-platinum");
         $scope.menutitle = NavigationService.makeactive("Micro Platinum");
         TemplateService.title = $scope.menutitle;
@@ -676,7 +676,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -691,7 +691,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
         };
     })
-    .controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('EngineeringProductCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("engineering-product");
         $scope.menutitle = NavigationService.makeactive("Engineering Product");
         TemplateService.title = $scope.menutitle;
@@ -721,7 +721,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('SemiFinishedCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SemiFinishedCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("semi-finished");
         $scope.menutitle = NavigationService.makeactive("Semi-Finished");
         TemplateService.title = $scope.menutitle;
@@ -733,7 +733,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classq = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -756,7 +756,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('R&DCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('R&DCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("r&d");
         $scope.menutitle = NavigationService.makeactive("R&D");
         TemplateService.title = $scope.menutitle;
@@ -773,7 +773,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('EngineeringHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('EngineeringHomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("engineering-home");
         $scope.menutitle = NavigationService.makeactive("engineering-home");
         TemplateService.title = $scope.menutitle;
@@ -806,7 +806,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -852,21 +852,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             img: "img/5.jpg"
         }];
     })
-    .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CareersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("careers");
         $scope.menutitle = NavigationService.makeactive("Careers");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('ProductsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ProductsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("products");
         $scope.menutitle = NavigationService.makeactive("Products");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('MetalCompoundCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MetalCompoundCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-compound");
         $scope.menutitle = NavigationService.makeactive("Metal-Compound");
         TemplateService.title = $scope.menutitle;
@@ -874,7 +874,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.header = "views/header2.html";
 
     })
-    .controller('TechnologyDevisionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('TechnologyDevisionCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("technology-devision");
         $scope.menutitle = NavigationService.makeactive("Technology-Devision");
         TemplateService.title = $scope.menutitle;
@@ -889,18 +889,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             isFirstDisabled: false
         };
 
-        $scope.data=[
-          {
-            img:"img/t1.jpg"
-          },{
-            img:"img/t2.jpg"
-          },{
-            img:"img/t3.jpg"
-          }
-        ];
+        $scope.data = [{
+            img: "img/t1.jpg"
+        }, {
+            img: "img/t2.jpg"
+        }, {
+            img: "img/t3.jpg"
+        }];
+
+        $scope.data1 = [{
+            img: "img/ammonia1.jpg"
+        }, {
+            img: "img/ammonia2.jpg"
+        }, {
+            img: "img/ammonia3.jpg"
+        }];
+
+        $scope.data2 = [{
+            img: "img/rhodium.jpg"
+        }, {
+            img: "img/rhodium2.jpg"
+        }, {
+            img: "img/rhodium3.jpg"
+        }, {
+            img: "img/rhodium4.jpg"
+
+        }];
+
+        $scope.data3 = [{
+            img: "img/corrugated.jpg"
+        }, {
+            img: "img/corrugated2.jpg"
+        }, {
+            img: "img/corrugated3.jpg"
+        }, {
+            img: "img/corrugated4.jpg"
+
+        }];
+
+        $scope.get = [{
+            //     name: "EUROPE",
+            //     email: "contacteu@hp.co.in"
+            // }, {
+            name: "REST OF THE WORLD",
+            email: "nitrocat@hp.co.in"
+        }];
+        // $scope.download = [{
+        //     name: "Download - PRECIOUS METAL COMPOUND"
+
+        // }, {
+        //     name: "Download - PRECIOUS METAL COMPOUND"
+
+        // }];
 
     })
-    .controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ElectricalHomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrical-home");
         $scope.menutitle = NavigationService.makeactive("Electrical Home");
         TemplateService.title = $scope.menutitle;
@@ -949,7 +992,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('CruciblesDishesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CruciblesDishesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("crucibles-dishes");
         $scope.menutitle = NavigationService.makeactive("Crucibles Dishes");
         TemplateService.title = $scope.menutitle;
@@ -969,7 +1012,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -986,7 +1029,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ServicesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("services");
         $scope.menutitle = NavigationService.makeactive("Services");
         TemplateService.title = $scope.menutitle;
@@ -998,7 +1041,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
 
-        $scope.tabchanges = function(tabs, a) {
+        $scope.tabchanges = function (tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -1026,17 +1069,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
     $.fancybox.close(true);
 })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function() {
+    $scope.changeLanguage = function () {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {
