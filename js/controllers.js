@@ -1084,14 +1084,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
+    .controller('MetalManagementCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("pre-metal-management");
+        $scope.menutitle = NavigationService.makeactive("Metal Management");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
 
-.controller('headerctrl', function ($scope, TemplateService) {
-    $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-        $(window).scrollTop(0);
-    });
-    $.fancybox.close(true);
-})
+        $scope.get = [{
+            name: "EUROPE",
+            email: "contacteu@hp.co.in"
+        }, {
+            name: "REST OF THE WORLD",
+            email: "contacts@hp.co.in"
+        }];
+        $scope.download = [{
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }, {
+            name: "Download - PRECIOUS METAL COMPOUND"
+
+        }];
+    })
+    .controller('headerctrl', function ($scope, TemplateService) {
+        $scope.template = TemplateService;
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            $(window).scrollTop(0);
+        });
+        $.fancybox.close(true);
+    })
 
 .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
