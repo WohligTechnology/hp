@@ -43,6 +43,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("About Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+          TemplateService.header = "views/header2.html";
 
     })
     .controller('BrochureCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
