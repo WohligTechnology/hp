@@ -1,4 +1,3 @@
-// JavaScript Document
 var firstapp = angular.module('firstapp', [
   'ui.router',
   'phonecatControllers',
@@ -162,11 +161,15 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
       url: "/services",
       templateUrl: "views/template.html",
       controller: 'ServicesCtrl'
-    });
+    })
+  state('pre-metal-management', {
+    url: "/pre-metal-management",
+    templateUrl: "views/template.html",
+    controller: 'MetalManagementCtrl'
+  });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
-
 
 firstapp.directive('img', function ($compile, $parse) {
   return {
