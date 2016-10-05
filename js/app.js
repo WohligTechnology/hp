@@ -162,11 +162,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
       templateUrl: "views/template.html",
       controller: 'ServicesCtrl'
     })
-  state('pre-metal-management', {
-    url: "/pre-metal-management",
-    templateUrl: "views/template.html",
-    controller: 'MetalManagementCtrl'
-  });
+    .state('pre-metal-management', {
+      url: "/pre-metal-management",
+      templateUrl: "views/template.html",
+      controller: 'MetalManagementCtrl'
+    });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
