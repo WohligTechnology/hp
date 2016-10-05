@@ -1175,7 +1175,12 @@ a {
         color: #00ff00;
     }
 }
-
+.panel-open{
+  .panel-heading{
+    color: #ffffff;
+background-color: #0d9dff;
+  }
+}
 //bootstrap forms
 
 /* Start writing sass here */
