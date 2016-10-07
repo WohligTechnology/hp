@@ -37,6 +37,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Precious Metal management ",
             img: "img/4a.jpg"
         }];
+        NavigationService.getHomeslider(function(data){
+          console.log(data);
+          $scope.banner=data.data.results;
+          console.log($scope.banner);
+        });
     })
     .controller('AboutUsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("about-us");
@@ -179,7 +184,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.header = "views/header2.html";
 
         $scope.oneAtATime = true;
-
+        $scope.metal=[];
         $scope.status = {
             isCustomHeaderOpen: false,
             isFirstOpen: true,
@@ -192,42 +197,38 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classq = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function (index) {
+            _.each($scope.metal,function (key) {
+              // body...
+              if(key._id == index){
+                key.active= true;
+              }else{
+                key.active= false;
+              }
+            });
 
-            $scope.tabs = tabs;
-            if (a == 1) {
-
-                $scope.classp = "active-tab";
-                $scope.classv = '';
-                $scope.classq = '';
-
-            } else if (a == 2) {
-
-                $scope.classp = '';
-                $scope.classq = '';
-                $scope.classv = "active-tab";
-            } else {
-
-                $scope.classp = '';
-                $scope.classv = '';
-                $scope.classq = "active-tab";
-            }
         };
-        $scope.data = [{
-            name: "C-C bons hydrogenation Double bonds, Triple bonds"
-        }, {
-            name: "C-N bons hydrogenation Nitriles, Imines, Hydrazones, Oximes"
-        }, {
-            name: "C=Obd hdrogenation Armatialdehdes, Aromaic Ketones"
-        }, {
-            name: "Redutive alkylation / Amination"
-        }, {
-            name: "Nitro / Nitroso group hydrogenation"
-        }, {
-            name: "Hetroaromatic hydrogenation"
-        }, {
-            name: "Aromatic hydrogenation"
-        }]
+
+        NavigationService.getReaction(function(data){
+          console.log(data);
+          $scope.data=data.data.results;
+          console.log($scope.data);
+        });
+
+$scope.reactionId=true;
+        $scope.findMetal=function(id){
+          NavigationService.getMetal(id,function(data){
+            console.log(data);
+            $scope.metal=data.data;
+            _.each($scope.metal,function (key) {
+              // body...
+              key.active= false;
+            })
+            $scope.tabchanges($scope.metal[0]._id);
+            console.log($scope.metal.name);
+            $scope.reactionId=false;
+          });
+        };
     })
     .controller('MetalCatalystCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-catalyst");
