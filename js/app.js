@@ -22,6 +22,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
       templateUrl: "views/template.html",
       controller: 'AboutUsCtrl'
     })
+    .state('contact-us', {
+      url: "/contact-us",
+      templateUrl: "views/template.html",
+      controller: 'ContactUsCtrl'
+    })
     .state('noble-metal', {
       url: "/noble-metal",
       templateUrl: "views/template.html",

@@ -10,10 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="hp-pr-decs pd45">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                        with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <p ng-bind-html="knowcat[0].description">
                     </p>
                 </div>
             </div>
@@ -61,116 +58,21 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="az" ng-if="tabs=='az'">
-              <div class="hp-acc">
+              <div  class="hp-acc">
                 <uib-accordion close-others="oneAtATime">
-                    <div uib-accordion-group class="panel-default" is-open="status.open">
-                        <uib-accordion-heading>
-                            RD-92
+                    <div uib-accordion-group ng-repeat="content in metalContent" >
+                        <uib-accordion-heading >
+                            {{content.name}}
                         </uib-accordion-heading>
                         <div class="hp-dt-in">
-                            <p>5%, 10%, PD/C</p>
+                            {{content.description}}
 
                         </div>
                     </div>
-                    <div uib-accordion-group class="panel-default">
-                        <uib-accordion-heading>
-                            RD-124
-                        </uib-accordion-heading>
-                    </div>
-                    <div uib-accordion-group class="panel-default">
-                        <uib-accordion-heading>
-                            RD-162
-                        </uib-accordion-heading>
-                    </div>
-                    <div uib-accordion-group class="panel-default">
-                        <uib-accordion-heading>
-                            RD-169
-                        </uib-accordion-heading>
-                    </div>
-                    <div uib-accordion-group class="panel-default">
-                        <uib-accordion-heading>
-                            RD-172
-                        </uib-accordion-heading>
-                    </div>
-
                 </uib-accordion>
               </div>
-                </div>
-                <div class="az" ng-if="tabs=='bz'">
-      <div class="hp-acc">
-        <uib-accordion close-others="oneAtATime">
-            <div uib-accordion-group class="panel-default" is-open="status.open">
-                <uib-accordion-heading>
-                    RD-92
-                </uib-accordion-heading>
-                <div class="hp-dt-in">
-                    <p>5%, 10%, PD/C</p>
-
-                </div>
+              </div>
             </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-124
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-162
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-169
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-172
-                </uib-accordion-heading>
-            </div>
-
-        </uib-accordion>
-      </div>
-                </div>
-                <div class="az" ng-if="tabs=='cz'">
-      <div class="hp-acc">
-        <uib-accordion close-others="oneAtATime">
-            <div uib-accordion-group class="panel-default" is-open="status.open">
-                <uib-accordion-heading>
-                    RD-92
-                </uib-accordion-heading>
-                <div class="hp-dt-in">
-                    <p>5%, 10%, PD/C</p>
-
-                </div>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-124
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-162
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-169
-                </uib-accordion-heading>
-            </div>
-            <div uib-accordion-group class="panel-default">
-                <uib-accordion-heading>
-                    RD-172
-                </uib-accordion-heading>
-            </div>
-
-        </uib-accordion>
-      </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">

@@ -21,19 +21,21 @@ var navigationservice = angular.module('navigationservice', [])
     //   classis: "active",
     //   anchor: "home"
     // }]
-  }, {
-    name: "Products",
-    classis: "active",
-    anchor: "products",
-  }, {
-    name: "Services ",
-    classis: "active",
-    anchor: "services ",
-  }, {
-    name: "Careers ",
-    classis: "active",
-    anchor: "careers ",
-  }, {
+  },
+  // {
+  //   name: "Products",
+  //   classis: "active",
+  //   anchor: "products",
+  // }, {
+  //   name: "Services ",
+  //   classis: "active",
+  //   anchor: "services ",
+  // }, {
+  //   name: "Careers ",
+  //   classis: "active",
+  //   anchor: "careers ",
+  // },
+  {
     name: "Contact Us",
     classis: "active",
     anchor: "contact-us",
@@ -69,7 +71,6 @@ var navigationservice = angular.module('navigationservice', [])
     },
 
     getMetal: function(_id,callback) {
-      console.log(_id);
       var data={
         _id:_id
       }
@@ -80,7 +81,7 @@ var navigationservice = angular.module('navigationservice', [])
         withCredentials: true
       }).success(callback);
     },
-
+///////////////////////////////////////////
     getMetalContent: function(_id,callback) {
       console.log(_id);
       var data={
@@ -92,6 +93,15 @@ var navigationservice = angular.module('navigationservice', [])
         data:data,
         withCredentials: true
       }).success(callback);
+    },
+
+    KnowCat: function(callback) {
+      $http({
+        url: adminurl + 'KnowCat/search',
+        method: 'POST',
+        withCredentials: true
+      }).success(callback);
+
     },
   };
 });
