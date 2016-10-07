@@ -80,5 +80,18 @@ var navigationservice = angular.module('navigationservice', [])
         withCredentials: true
       }).success(callback);
     },
+
+    getMetalContent: function(_id,callback) {
+      console.log(_id);
+      var data={
+        _id:_id
+      }
+      $http({
+        url: adminurl + 'Metal/getOne',
+        method: 'POST',
+        data:data,
+        withCredentials: true
+      }).success(callback);
+    },
   };
 });
