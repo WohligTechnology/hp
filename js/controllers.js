@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.select', 'ksSwiper'])
 
-.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
 
         console.log("Testing Consoles");
@@ -33,26 +33,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Precious Metal management ",
             img: "img/4a.jpg",
             link: "pre-metal-management"
-        },{
+        }, {
+            name: "nitro technology devision",
+            img: "img/hp-ni.jpg",
+            link: "technology-devision"
+        }, {
             name: "SERVICES (Coming Soon)",
             img: "img/4.jpg",
             link: ""
-        } ];
-        NavigationService.getHomeslider(function(data){
-          console.log(data);
-          $scope.banner=data.data.results;
-          console.log($scope.banner);
+        }];
+        NavigationService.getHomeslider(function(data) {
+            console.log(data);
+            $scope.banner = data.data.results;
+            console.log($scope.banner);
         });
     })
-    .controller('AboutUsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("about-us");
         $scope.menutitle = NavigationService.makeactive("About Us");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-          TemplateService.header = "views/header2.html";
+        TemplateService.header = "views/header2.html";
 
     })
-    .controller('BrochureCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('BrochureCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("brochure");
         $scope.menutitle = NavigationService.makeactive("Brochure");
         TemplateService.title = $scope.menutitle;
@@ -70,7 +74,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ]
 
     })
-    .controller('JewelleryIndustryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('JewelleryIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("jewellery-industry");
         $scope.menutitle = NavigationService.makeactive("Jewellery Industry");
         TemplateService.title = $scope.menutitle;
@@ -78,21 +82,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.header = "views/header2.html";
 
         $scope.glass = [{
-            img: "img/g1.jpg",
+            img: "img/Jewellery/1.jpg",
             name: "V-BOTTOM CRUCIBLES"
         }, {
-            img: "img/g2.jpg",
+            img: "img/Jewellery/3.jpg",
             name: "OPEN-ENDED TUBES"
         }, {
-            img: "img/g3.jpg",
+            img: "img/Jewellery/4.jpg",
             name: "FLARED TUBES"
         }, {
-            img: "img/g1.jpg",
+            img: "img/Jewellery/5.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }, {
+            img: "img/Jewellery/6.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }, {
+            img: "img/Jewellery/7.jpg",
             name: "V-BOTTOM CRUCIBLES"
         }];
 
     })
-    .controller('NobleMetalCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('NobleMetalCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("noble-metal");
         $scope.menutitle = NavigationService.makeactive("Noble Metal");
         TemplateService.title = $scope.menutitle;
@@ -105,7 +115,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classq = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -128,18 +138,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('SpinnerettesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SpinnerettesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("spinnerettes");
         $scope.menutitle = NavigationService.makeactive("Spinnerettes");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -155,83 +172,127 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('GlassIndustryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('GlassIndustryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("glass-industry");
         $scope.menutitle = NavigationService.makeactive("Glass Industry");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
 
+        $scope.oneAtATime = true;
+        $scope.metal = [];
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
         $scope.glass = [{
-            img: "img/g1.jpg",
+            img: "img/Glass_F&B_3.jpg",
             name: "V-BOTTOM CRUCIBLES"
         }, {
-            img: "img/g2.jpg",
+            img: "img/Glass_F&B_4.jpg",
             name: "OPEN-ENDED TUBES"
         }, {
-            img: "img/g3.jpg",
+            img: "img/Glass_F&B_5.jpg",
             name: "FLARED TUBES"
         }, {
-            img: "img/g1.jpg",
+            img: "img/Glass_F&B_6.jpg",
+            name: "V-BOTTOM CRUCIBLES"
+        }, {
+            img: "img/Glass-FB.jpg",
             name: "V-BOTTOM CRUCIBLES"
         }];
 
     })
-    .controller('KnowCatalystCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('KnowCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("know-catalyst");
         $scope.menutitle = NavigationService.makeactive("Know Catalyst");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
 
-        $scope.oneAtATime = true;
-        $scope.metal=[];
-        $scope.status = {
-            isCustomHeaderOpen: false,
-            isFirstOpen: true,
-            isFirstDisabled: false
-        };
+                $scope.oneAtATime = true;
+                $scope.metal=[];
+                $scope.status = {
+                    isCustomHeaderOpen: false,
+                    isFirstOpen: true,
+                    isFirstDisabled: false
+                };
 
-        $scope.tabs = 'az';
-        $scope.classp = 'active-tab';
-        $scope.classv = '';
-        $scope.classq = '';
+                $scope.tabs = 'az';
+                $scope.classp = 'active-tab';
+                $scope.classv = '';
+                $scope.classq = '';
 
 
-        $scope.tabchanges = function (index) {
-            _.each($scope.metal,function (key) {
-              // body...
-              if(key._id == index){
-                key.active= true;
-              }else{
-                key.active= false;
-              }
-            });
+                $scope.tabchanges = function (index) {
+                    _.each($scope.metal,function (key) {
+                      // body...
+                      if(key._id == index){
+                        key.active= true;
+                      }else{
+                        key.active= false;
+                      }
+                    });
 
-        };
 
-        NavigationService.getReaction(function(data){
-          console.log(data);
-          $scope.data=data.data.results;
-          console.log($scope.data);
+                    NavigationService.getMetalContent(index,function(data){
+                      console.log(data);
+                      $scope.metalContent=data.data.content;
+                      console.log($scope.metalContent);
+                    });
+
+
+                };
+
+                NavigationService.getReaction(function(data){
+                  console.log(data);
+                  $scope.data=data.data.results;
+                  console.log($scope.data);
+                });
+
+                NavigationService.KnowCat(function(data){
+                  console.log(data);
+                  $scope.knowcat=data.data.results;
+                  console.log($scope.knowcat);
+                });
+
+        $scope.reactionId=true;
+                $scope.findMetal=function(id){
+                  NavigationService.getMetal(id,function(data){
+                    console.log(data);
+                    $scope.metal=data.data;
+                    _.each($scope.metal,function (key) {
+                      // body...
+                      key.active= false;
+                    })
+                    $scope.tabchanges($scope.metal[0]._id);
+                    $scope.reactionId=false;
+                  });
+                };
+
+        NavigationService.getReaction(function(data) {
+            console.log(data);
+            $scope.data = data.data.results;
+            console.log($scope.data);
         });
 
-$scope.reactionId=true;
-        $scope.findMetal=function(id){
-          NavigationService.getMetal(id,function(data){
-            console.log(data);
-            $scope.metal=data.data;
-            _.each($scope.metal,function (key) {
-              // body...
-              key.active= false;
-            })
-            $scope.tabchanges($scope.metal[0]._id);
-            console.log($scope.metal.name);
-            $scope.reactionId=false;
-          });
+        $scope.reactionId = true;
+        $scope.findMetal = function(id) {
+            NavigationService.getMetal(id, function(data) {
+                console.log(data);
+                $scope.metal = data.data;
+                _.each($scope.metal, function(key) {
+                    // body...
+                    key.active = false;
+                })
+                $scope.tabchanges($scope.metal[0]._id);
+                console.log($scope.metal.name);
+                $scope.reactionId = false;
+            });
         };
     })
-    .controller('MetalCatalystCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MetalCatalystCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-catalyst");
         $scope.menutitle = NavigationService.makeactive("Metal Catalyst");
         TemplateService.title = $scope.menutitle;
@@ -239,7 +300,7 @@ $scope.reactionId=true;
         TemplateService.header = "views/header2.html";
 
     })
-    .controller('GetAnswerCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('GetAnswerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("get-answer");
         $scope.menutitle = NavigationService.makeactive("get-answer");
         TemplateService.title = $scope.menutitle;
@@ -261,7 +322,7 @@ $scope.reactionId=true;
         }];
 
     })
-    .controller('PressCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('PressCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("press");
         $scope.menutitle = NavigationService.makeactive("Press");
         TemplateService.title = $scope.menutitle;
@@ -281,7 +342,7 @@ $scope.reactionId=true;
         $scope.classj = '';
         $scope.classk = '';
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
             $scope.tabs = tabs;
             if (a == 1) {
                 $scope.classa = "active-tab";
@@ -497,7 +558,7 @@ $scope.reactionId=true;
         ];
 
     })
-    .controller('RivetsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('RivetsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("rivets");
         $scope.menutitle = NavigationService.makeactive("Rivets");
         TemplateService.title = $scope.menutitle;
@@ -519,7 +580,7 @@ $scope.reactionId=true;
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -565,7 +626,7 @@ $scope.reactionId=true;
             img: "img/5.jpg"
         }];
     })
-    .controller('ProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("profile");
         $scope.menutitle = NavigationService.makeactive("Profile");
         TemplateService.title = $scope.menutitle;
@@ -581,7 +642,7 @@ $scope.reactionId=true;
 
 
     })
-    .controller('AssemblyCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('AssemblyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("assembly");
         $scope.menutitle = NavigationService.makeactive("Assembly");
         TemplateService.title = $scope.menutitle;
@@ -590,7 +651,7 @@ $scope.reactionId=true;
 
 
     })
-    .controller('SaltCatalystsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SaltCatalystsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("salt-catalysts");
         $scope.menutitle = NavigationService.makeactive("Salt Catalysts");
         TemplateService.title = $scope.menutitle;
@@ -599,10 +660,10 @@ $scope.reactionId=true;
 
         $scope.get = [{
             name: "EUROPE",
-            email: "contacteu@hp.co.in"
+            email: " Peterclaes@catavserv.co.uk"
         }, {
             name: "REST OF THE WORLD",
-            email: "contacteu@hp.co.in"
+            email: "catalyst@hp.co.in"
         }];
         $scope.download = [{
             name: "Download - PRECIOUS METAL COMPOUND"
@@ -615,7 +676,17 @@ $scope.reactionId=true;
 
 
     })
-    .controller('ElectrodesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ContactUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("contact-us");
+        $scope.menutitle = NavigationService.makeactive("Contact US");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        TemplateService.header = "views/header2.html";
+
+
+
+    })
+    .controller('ElectrodesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrodes");
         $scope.menutitle = NavigationService.makeactive("Electrodes");
         TemplateService.title = $scope.menutitle;
@@ -628,7 +699,7 @@ $scope.reactionId=true;
         $scope.classq = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -656,7 +727,7 @@ $scope.reactionId=true;
             'img/e3.png'
         ];
     })
-    .controller('TemperatureSensingCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('TemperatureSensingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("temperature-sensing");
         $scope.menutitle = NavigationService.makeactive("Temperature Sensing");
         TemplateService.title = $scope.menutitle;
@@ -665,16 +736,23 @@ $scope.reactionId=true;
 
 
     })
-    .controller('PlatinumLabwareCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('PlatinumLabwareCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("platinum-labware");
         $scope.menutitle = NavigationService.makeactive("Platinum Labware");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         TemplateService.header = "views/header2.html";
+        $scope.oneAtATime = true;
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
 
 
     })
-    .controller('MicroPlatinumCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MicroPlatinumCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("micro-platinum");
         $scope.menutitle = NavigationService.makeactive("Micro Platinum");
         TemplateService.title = $scope.menutitle;
@@ -686,7 +764,7 @@ $scope.reactionId=true;
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -701,7 +779,7 @@ $scope.reactionId=true;
             }
         };
     })
-    .controller('EngineeringProductCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('EngineeringProductCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("engineering-product");
         $scope.menutitle = NavigationService.makeactive("Engineering Product");
         TemplateService.title = $scope.menutitle;
@@ -710,28 +788,28 @@ $scope.reactionId=true;
         $scope.product = [{
             name: "Crucibles & Dishes ",
             img: "img/en1.png",
-            link: "img/en1.png"
+            link: "crucibles-dishes"
         }, {
-            name: "Crucibles & Dishes",
+            name: "elctrodes",
             img: "img/en2.png",
-            link: "img/en2.png"
+            link: "electrodes"
         }, {
             name: "Other Platinum Labware",
             img: "img/en3.png",
-            link: "img/en3.png"
+            link: "platinum-labware"
         }, {
             name: "Micro Chemical Apparatus",
             img: "img/en4.png",
-            link: "img/en4.png"
+            link: "micro-platinum"
         }, {
             name: "Temperature Sensing Products",
             img: "img/en5.png",
-            link: "img/en5.png"
+            link: "temperature-sensing"
         }];
 
 
     })
-    .controller('SemiFinishedCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('SemiFinishedCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("semi-finished");
         $scope.menutitle = NavigationService.makeactive("Semi-Finished");
         TemplateService.title = $scope.menutitle;
@@ -752,7 +830,7 @@ $scope.reactionId=true;
         $scope.classq = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -775,7 +853,7 @@ $scope.reactionId=true;
         };
 
     })
-    .controller('R&DCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('R&DCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("r&d");
         $scope.menutitle = NavigationService.makeactive("R&D");
         TemplateService.title = $scope.menutitle;
@@ -792,7 +870,7 @@ $scope.reactionId=true;
 
 
     })
-    .controller('EngineeringHomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('EngineeringHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("engineering-home");
         $scope.menutitle = NavigationService.makeactive("engineering-home");
         TemplateService.title = $scope.menutitle;
@@ -807,12 +885,9 @@ $scope.reactionId=true;
             isFirstDisabled: false
         };
 
-        $scope.get = [{
-            name: "EUROPE",
-            email: "contacteu@hp.co.in"
-        }, {
-            name: "REST OF THE WORLD",
-            email: "contacteu@hp.co.in"
+        $scope.get = [ {
+            name: "",
+            email: "info@hp.co.in"
         }];
         $scope.download = [{
             name: "Download - PRECIOUS METAL COMPOUND"
@@ -825,7 +900,7 @@ $scope.reactionId=true;
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -846,46 +921,46 @@ $scope.reactionId=true;
             'img/s4.png'
         ];
         $scope.product = [{
-            name: "LABORATORY APPARATUS  ",
-            img: "img/5.jpg"
+            name: "LABORATORY APPARATUS",
+            img: "img/5.jpg",
+            link: "engineering-product"
         }, {
-            name: "SPUTTER TARGETS ",
-            img: "img/6.jpg"
+            name: "PRECIOUS METAL Spinnerettes",
+            img: "img/6.jpg",
+            link: ""
         }, {
-            name: "PRECIOUS METALGAUZES & Allied Services ",
-            img: "img/7.jpg"
+            name: "glass industry",
+            img: "img/7.jpg",
+            link: "glass-industry"
         }, {
-            name: "Platinum/ Rhodium alloy stirrers ",
-            img: "img/8.jpg"
+            name: "noble metal bare wires ",
+            img: "img/8.jpg",
+            link: "noble-metal"
         }, {
-            name: "Precious Metal management ",
-            img: "img/9.jpg"
+            name: "jewellery industry ",
+            img: "img/9.jpg",
+            link: "jewellery-industry"
         }, {
-            name: "SPUTTER TARGETS  ",
-            img: "img/10.jpg"
-        }, {
-            name: "Platinum/ Rhodium alloy stirrers",
-            img: "img/11.jpg"
-        }, {
-            name: "LABORATORY APPARATUS  ",
-            img: "img/5.jpg"
+            name: "platinum Labware guidelines",
+            img: "img/10.jpg",
+            link: ""
         }];
     })
-    .controller('CareersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("careers");
         $scope.menutitle = NavigationService.makeactive("Careers");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('ProductsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ProductsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("products");
         $scope.menutitle = NavigationService.makeactive("Products");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('MetalCompoundCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MetalCompoundCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("metal-compound");
         $scope.menutitle = NavigationService.makeactive("Metal-Compound");
         TemplateService.title = $scope.menutitle;
@@ -893,7 +968,7 @@ $scope.reactionId=true;
         TemplateService.header = "views/header2.html";
 
     })
-    .controller('TechnologyDevisionCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('TechnologyDevisionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("technology-devision");
         $scope.menutitle = NavigationService.makeactive("Technology-Devision");
         TemplateService.title = $scope.menutitle;
@@ -950,7 +1025,7 @@ $scope.reactionId=true;
             //     name: "EUROPE",
             //     email: "contacteu@hp.co.in"
             // }, {
-            name: "REST OF THE WORLD",
+            name: "",
             email: "nitrocat@hp.co.in"
         }];
         // $scope.download = [{
@@ -962,7 +1037,7 @@ $scope.reactionId=true;
         // }];
 
     })
-    .controller('ElectricalHomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ElectricalHomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("electrical-home");
         $scope.menutitle = NavigationService.makeactive("Electrical Home");
         TemplateService.title = $scope.menutitle;
@@ -970,11 +1045,8 @@ $scope.reactionId=true;
         TemplateService.header = "views/header2.html";
 
         $scope.get = [{
-            name: "EUROPE",
-            email: "contacteu@hp.co.in"
-        }, {
             name: "REST OF THE WORLD",
-            email: "contacteu@hp.co.in"
+            email: "contacts@hp.co.in"
         }];
         $scope.download = [{
             name: "Download - PRECIOUS METAL COMPOUND"
@@ -985,33 +1057,37 @@ $scope.reactionId=true;
         }];
 
         $scope.product = [{
+
+            name: "SEMI FINISHED products",
+            link: "semi-finished",
+            img: "img/a5.jpg"
+        }, {
             name: "RIVETS ",
             link: "rivets ",
             img: "img/a1.jpg"
+
         }, {
             name: "PROFILE",
             link: "profile",
             img: "img/a2.jpg"
+
         }, {
             name: "ASSEMBLES",
             link: "assembly",
             img: "img/a3.jpg"
+
         }, {
             name: "R&D",
             link: "r&d",
             img: "img/a4.jpg"
         }, {
-            name: "SEMI-FINISHED",
-            link: "semi-finished",
-            img: "img/a5.jpg"
-        }, {
-            name: "R&D ",
-            link: "r&d",
-            img: "img/a6.jpg"
+            name: "",
+            link: "",
+            img: "img/hp-none2.jpg"
         }];
 
     })
-    .controller('CruciblesDishesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CruciblesDishesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("crucibles-dishes");
         $scope.menutitle = NavigationService.makeactive("Crucibles Dishes");
         TemplateService.title = $scope.menutitle;
@@ -1031,7 +1107,7 @@ $scope.reactionId=true;
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -1048,7 +1124,7 @@ $scope.reactionId=true;
 
 
     })
-    .controller('ServicesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("services");
         $scope.menutitle = NavigationService.makeactive("Services");
         TemplateService.title = $scope.menutitle;
@@ -1060,7 +1136,7 @@ $scope.reactionId=true;
         $scope.classv = '';
 
 
-        $scope.tabchanges = function (tabs, a) {
+        $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
             if (a == 1) {
@@ -1087,7 +1163,7 @@ $scope.reactionId=true;
         }];
 
     })
-    .controller('MetalManagementCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('MetalManagementCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("pre-metal-management");
         $scope.menutitle = NavigationService.makeactive("Metal Management");
         TemplateService.title = $scope.menutitle;
@@ -1109,17 +1185,17 @@ $scope.reactionId=true;
 
         }];
     })
-    .controller('headerctrl', function ($scope, TemplateService) {
+    .controller('headerctrl', function($scope, TemplateService) {
         $scope.template = TemplateService;
-        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
         $.fancybox.close(true);
     })
 
-.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function () {
+    $scope.changeLanguage = function() {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {
