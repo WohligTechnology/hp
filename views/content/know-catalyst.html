@@ -26,9 +26,11 @@
             </div>
             <div class="col-md-6">
                 <div class="hp-relative float-right hp-sl-rec">
-                    <ui-select ng-model="item.selected">
-                        <ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
-                        <ui-select-choices repeat="item in data | filter: $select.name">
+                    <ui-select ng-model="item.selected" ng-change="findMetal(item.selected._id)">
+                        <ui-select-match placeholder="Select or search a person in the list...">
+                          {{$select.selected.name}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="item in data | filter: $select.name" >
                             <div ng-bind-html="item.name | highlight: $select.name"></div>
                             <small ng-bind-html="item.email | highlight: $select.name"></small>
                         </ui-select-choices>
@@ -39,6 +41,9 @@
                 </div>
             </div>
         </div>
+
+  <div ng-hide="reactionId">
+
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="hp-d-rslt mt60">
@@ -46,10 +51,8 @@
                 <div class="mt60">
                   <h2 class="font-bold text-center">SELECT METALS</h2>
                   <div class="hp-tab-btn">
-                      <div class="btn-group">
-                          <button type="button" name="button" ng-click="tabchanges('az',1)" class="{{classp}} btn-blue font-bold text-up text-center">Platinum</button>
-                          <button type="button" name="button" ng-click="tabchanges('bz',2)" class="{{classv}} btn-blue font-bold text-up text-center">Paladium</button>
-                          <button type="button" name="button" ng-click="tabchanges('cz',3)" class="{{classq}} btn-blue font-bold text-up text-center">Rhodium </button>
+                      <div class="btn-group" >
+                          <button  ng-repeat="item in metal" type="button" name="button" ng-click="tabchanges(item._id)" class=" btn-blue font-bold text-up text-center" ng-class="{'active-tab':item.active}">{{item.name}}</button>
                       </div>
                   </div>
                 </div>
@@ -176,5 +179,8 @@
                 </div>
             </div>
         </div>
+
+
+      </div>
     </div>
 </section>

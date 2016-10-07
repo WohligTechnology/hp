@@ -250,3 +250,32 @@ firstapp.config(function ($translateProvider) {
   $translateProvider.translations('hi', LanguageHindi);
   $translateProvider.preferredLanguage('en');
 });
+
+firstapp.filter('uploadpath', function() {
+  return function(input, width, height, style) {
+    var other = "";
+    if (width && width !== "") {
+      other += "&width=" + width;
+    }
+    if (height && height !== "") {
+      other += "&height=" + height;
+    }
+    if (style && style !== "") {
+      other += "&style=" + style;
+    }
+    if (input) {
+      return imgpath + "?file=" + input + other;
+    }
+  };
+});
+
+firstapp.filter('serverimage', function() {
+  return function(image) {
+    if (image && image !== null) {
+
+      return adminurl + "upload/readFile?file=" + image;
+    } else {
+      return undefined;
+    }
+  };
+});
