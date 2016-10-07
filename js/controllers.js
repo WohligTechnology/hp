@@ -30,13 +30,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             img: "img/3.jpg",
             link: "salt-catalysts"
         }, {
-            name: "SERVICES ",
-            img: "img/4.jpg",
-            link: "services"
-        }, {
             name: "Precious Metal management ",
-            img: "img/4a.jpg"
-        }];
+            img: "img/4a.jpg",
+            link: "pre-metal-management"
+        },{
+            name: "SERVICES (Coming Soon)",
+            img: "img/4.jpg",
+            link: ""
+        } ];
         NavigationService.getHomeslider(function(data){
           console.log(data);
           $scope.banner=data.data.results;
