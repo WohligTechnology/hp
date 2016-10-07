@@ -1175,12 +1175,18 @@ a {
         color: #00ff00;
     }
 }
-.panel-open{
-  .panel-heading{
-    color: #ffffff;
-background-color: #0d9dff;
-  }
+
+.panel-open {
+    .panel-heading {
+        color: #ffffff;
+        background-color: #0d9dff;
+    }
 }
+
+.acc-spac {
+    margin: 34px 0;
+}
+
 //bootstrap forms
 
 /* Start writing sass here */
