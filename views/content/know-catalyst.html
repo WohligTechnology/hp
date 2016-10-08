@@ -1,7 +1,7 @@
 <section class="bg-grediant">
     <div class="container">
         <div class="hp-top-banner">
-            <img src="img/hp-know.jpg" alt="Hindustan Platinum" class="img-responsive">
+            <img ng-src="{{knowcat[0].banner|serverimage}}" alt="Hindustan Platinum" class="img-responsive">
         </div>
     </div>
 </section>
@@ -65,7 +65,7 @@
                             {{content.name}}
                         </uib-accordion-heading>
                         <div class="hp-dt-in">
-                            {{content.description}}
+                            <p ng-bind-html="content.description"></p>
 
                         </div>
                     </div>
