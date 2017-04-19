@@ -66,10 +66,16 @@ config/local.js
 #
 ################################################
 
-node_modules
-bower_components
-
-
+bower_components/
+node_modules/
+node_modueles/
+w/
+.sass-cache/
+*.tar
+production/
+*.zip
+css/
+img2/
 
 
 ################################################
